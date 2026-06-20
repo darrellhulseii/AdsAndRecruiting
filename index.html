@@ -321,6 +321,63 @@ footer .wrap{display:flex;flex-direction:column;gap:10px}
 .offer-card{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--green);border-radius:13px;padding:18px}
 .offer-card .of-tag{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--green);font-weight:700;margin-bottom:7px}
 .offer-card p{font-size:13.5px;color:var(--ink);line-height:1.5}
+/* performance tracker */
+.pl-form{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin-bottom:18px}
+.pl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(max-width:620px){.pl-grid{grid-template-columns:repeat(2,1fr)}}
+.pl-field{display:flex;flex-direction:column;gap:5px}
+.pl-field label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;font-weight:600}
+.pl-field input{background:var(--navy3);border:1px solid var(--line);border-radius:9px;padding:10px 12px;color:var(--ink);font-family:var(--mono);font-size:14px;width:100%}
+.pl-field input:focus{outline:none;border-color:var(--gold)}
+.pl-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.pl-btn{font-family:var(--display);font-weight:700;font-size:13px;border-radius:10px;padding:11px 18px;cursor:pointer;border:1px solid var(--line);background:var(--navy3);color:var(--ink);transition:.15s}
+.pl-btn:hover{border-color:var(--gold)}
+.pl-btn.primary{background:var(--gold);color:#1a1206;border-color:var(--gold)}
+.pl-btn.primary:hover{filter:brightness(1.08)}
+.pl-summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:11px;margin-bottom:18px}
+.pl-stat{background:var(--navy3);border:1px solid var(--line);border-radius:11px;padding:13px 14px}
+.pl-stat .ps-l{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px}
+.pl-stat .ps-v{font-family:var(--mono);font-size:19px;font-weight:700;color:var(--ink);line-height:1}
+.pl-stat.good .ps-v{color:var(--green)}
+.pl-list{display:grid;gap:11px}
+.pl-entry{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:15px 17px}
+.pe-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:11px}
+.pe-date{font-family:var(--display);font-weight:800;font-size:15px}
+.pe-del{background:none;border:none;color:var(--faint);font-size:19px;cursor:pointer;line-height:1;padding:2px 7px;border-radius:6px}
+.pe-del:hover{color:var(--red);background:rgba(214,69,69,.1)}
+.pe-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
+@media(max-width:620px){.pe-metrics{grid-template-columns:repeat(2,1fr)}}
+.pe-metrics .m-l{display:block;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:2px}
+.pe-metrics .m-v{display:block;font-family:var(--mono);font-size:13.5px;font-weight:700;color:var(--ink)}
+.pe-metrics .m-v.accent{color:var(--gold-br)}
+.pl-empty{text-align:center;color:var(--muted);font-size:14px;padding:26px;border:1px dashed var(--line);border-radius:13px}
+/* recruiting: platform step blocks */
+.keyrule{background:rgba(245,166,35,.08);border:1px solid var(--gold);border-radius:13px;padding:18px 20px;margin-bottom:26px}
+.keyrule p{font-size:13.5px;color:var(--ink);line-height:1.55;margin:0}
+.keyrule b{color:var(--gold-br)}
+.plat{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:22px;margin-bottom:16px}
+.plat-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.plat-name{font-family:var(--display);font-weight:800;font-size:17px}
+.plat-tag{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-br);font-weight:600;white-space:nowrap}
+.plat-steps{margin:0;padding-left:0;list-style:none;counter-reset:ps;display:grid;gap:10px}
+.plat-steps li{position:relative;padding-left:34px;font-size:13.5px;color:var(--ink);line-height:1.5;counter-increment:ps}
+.plat-steps li::before{content:counter(ps);position:absolute;left:0;top:1px;width:22px;height:22px;background:var(--navy3);border:1px solid var(--line);border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;font-weight:700;color:var(--gold-br)}
+.plat-note{margin-top:14px;font-size:12.5px;color:var(--muted);background:rgba(245,166,35,.06);border-radius:9px;padding:11px 13px;line-height:1.5}
+.plat-note b{color:var(--ink)}
+/* tracker category toggle + badges */
+.pl-cats{display:inline-flex;gap:4px;background:var(--navy3);border:1px solid var(--line);border-radius:10px;padding:4px;margin-bottom:16px}
+.pl-cat{font-family:var(--display);font-weight:700;font-size:13px;border:none;background:none;color:var(--muted);padding:8px 18px;border-radius:7px;cursor:pointer;transition:.15s}
+.pl-cat.active{background:var(--gold);color:#1a1206}
+.pe-badge{font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;padding:3px 8px;border-radius:5px;margin-left:8px;vertical-align:middle}
+.pe-badge.sales{background:rgba(91,141,239,.18);color:#8fb4ff}
+.pe-badge.rec{background:rgba(245,166,35,.16);color:var(--gold-br)}
+/* job description blocks */
+.jd-block{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:16px;overflow:hidden}
+.jd-head{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:13px 18px;border-bottom:1px solid var(--line);background:var(--navy3)}
+.jd-title{font-family:var(--display);font-weight:800;font-size:14px}
+.jd-copy{font-family:var(--display);font-weight:700;font-size:12px;border:1px solid var(--gold);background:var(--gold);color:#1a1206;border-radius:8px;padding:7px 15px;cursor:pointer;transition:.15s;white-space:nowrap}
+.jd-copy:hover{filter:brightness(1.08)}
+.jd-text{white-space:pre-wrap;font-family:var(--body);font-size:13px;line-height:1.6;color:var(--ink);padding:18px;user-select:text;max-height:340px;overflow:auto}
 </style>
 </head>
 <body>
@@ -338,6 +395,9 @@ footer .wrap{display:flex;flex-direction:column;gap:10px}
       <a href="#playbook">Ads</a>
       <a href="#paidmethods">Paid plays</a>
       <a href="#launchkit">Launch kit</a>
+      <a href="#tracker">Tracker</a>
+      <a href="#recruitads">Recruit ads</a>
+      <a href="#jobposts">Job posts</a>
       <a href="#organic">Organic</a>
       <a href="#principles">Principles</a>
       <a href="#videos">Videos</a>
@@ -887,6 +947,397 @@ footer .wrap{display:flex;flex-direction:column;gap:10px}
   </div>
 </section>
 
+<!-- TRACKER -->
+<section class="section" id="tracker">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <div class="eyebrow">Live tracker</div>
+      <h2>Log real numbers, watch it learn</h2>
+      <p>Enter what actually happened each week. Your totals, averages, and ROAS update automatically, and you can push your real numbers into the calculator above.</p>
+    </div>
+
+    <div class="pl-form reveal">
+      <div class="pl-cats">
+        <button class="pl-cat active" id="pl-cat-sales" data-cat="sales" type="button">Sales</button>
+        <button class="pl-cat" id="pl-cat-rec" data-cat="recruiting" type="button">Recruiting</button>
+      </div>
+      <div class="pl-grid">
+        <div class="pl-field"><label>Date / period</label><input type="date" id="pl-date"></div>
+        <div class="pl-field"><label>Ad spend ($)</label><input type="number" id="pl-spend" min="0" placeholder="0"></div>
+        <div class="pl-field sales-f"><label>Leads</label><input type="number" id="pl-leads" min="0" placeholder="0"></div>
+        <div class="pl-field sales-f"><label>Qualified / appts</label><input type="number" id="pl-qual" min="0" placeholder="0"></div>
+        <div class="pl-field sales-f"><label>Sales</label><input type="number" id="pl-sales" min="0" placeholder="0"></div>
+        <div class="pl-field sales-f"><label>Revenue ($)</label><input type="number" id="pl-rev" min="0" placeholder="0"></div>
+        <div class="pl-field rec-f" style="display:none"><label>Applicants</label><input type="number" id="pl-applicants" min="0" placeholder="0"></div>
+        <div class="pl-field rec-f" style="display:none"><label>Interviews</label><input type="number" id="pl-interviews" min="0" placeholder="0"></div>
+        <div class="pl-field rec-f" style="display:none"><label>Recruited</label><input type="number" id="pl-recruited" min="0" placeholder="0"></div>
+      </div>
+      <div class="pl-actions">
+        <button class="pl-btn primary" id="pl-add">+ Add entry</button>
+        <button class="pl-btn" id="pl-apply">Apply my averages to the calculator</button>
+        <button class="pl-btn" id="pl-export">Export backup</button>
+        <button class="pl-btn" id="pl-import-btn">Import backup</button>
+        <input type="file" id="pl-import" accept="application/json" style="display:none">
+      </div>
+      <p class="mini-note" style="font-style:normal;margin-top:12px">Saved in this browser on this device. Use Export to back up your data or move it to another device, then Import to load it.</p>
+    </div>
+
+    <div class="sub-label reveal">Sales — running totals</div>
+    <div class="pl-summary reveal" id="pl-summary"></div>
+    <div class="sub-label reveal">Recruiting — running totals</div>
+    <div class="pl-summary reveal" id="pl-summary-rec"></div>
+
+    <div class="sub-label reveal">History</div>
+    <div class="pl-list reveal" id="pl-list"></div>
+  </div>
+</section>
+
+<!-- RECRUIT ADS -->
+<section class="section" id="recruitads">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <div class="eyebrow">Hiring engine</div>
+      <h2>Recruit reps with paid ads</h2>
+      <p>Fill your 1099 bench with ad spend. A step-by-step setup for every platform — built around the one thing that trips most people up: hiring ads are legally restricted.</p>
+    </div>
+
+    <div class="keyrule reveal">
+      <p><b>⚠ Read this first.</b> Recruiting ads are not normal ads. On Meta you must declare the Employment special ad category; on Google you must accept the employment policy. Both block targeting or excluding people by age, gender, ZIP code, or other protected traits — so you win on creative and offer, not narrow targeting.</p>
+    </div>
+
+    <div class="sub-label reveal">Model your recruiting funnel</div>
+    <p class="mini-note" style="font-style:normal">Set your recruiting budget and rates to see applicants, interviews, and hires. Push your real numbers in from the Tracker once you have them.</p>
+    <div class="calc-wrap reveal">
+      <div class="calc-row"><div class="cl">Monthly recruiting budget <span class="cv" id="rc-budget-v">$800</span></div><input type="range" id="rc-budget" min="100" max="6000" step="50" value="800"></div>
+      <div class="calc-row"><div class="cl">Cost per applicant <span class="cv" id="rc-cpa-v">$12</span></div><input type="range" id="rc-cpa" min="2" max="60" step="1" value="12"></div>
+      <div class="calc-row"><div class="cl">Applicant to interview rate <span class="cv" id="rc-i2a-v">35%</span></div><input type="range" id="rc-i2a" min="5" max="80" step="1" value="35"></div>
+      <div class="calc-row"><div class="cl">Interview to recruited rate <span class="cv" id="rc-i2h-v">40%</span></div><input type="range" id="rc-i2h" min="5" max="90" step="1" value="40"></div>
+      <div class="calc-results">
+        <div class="calc-stat"><div class="cs-l">Applicants / mo</div><div class="cs-v" id="rc-applicants">67</div></div>
+        <div class="calc-stat"><div class="cs-l">Interviews / mo</div><div class="cs-v" id="rc-interviews">23</div></div>
+        <div class="calc-stat hl"><div class="cs-l">Recruited / mo</div><div class="cs-v" id="rc-recruited">9</div></div>
+        <div class="calc-stat"><div class="cs-l">Cost / applicant</div><div class="cs-v" id="rc-cpa-out">$12</div></div>
+        <div class="calc-stat"><div class="cs-l">Cost / interview</div><div class="cs-v" id="rc-cpi">$35</div></div>
+        <div class="calc-stat hl"><div class="cs-l">Cost / hire</div><div class="cs-v" id="rc-cph">$87</div></div>
+      </div>
+      <div class="funnel">
+        <div class="fn-row"><span class="fn-name">Applicants</span><div class="fn-bar"><div class="fn-fill a" id="rc-bar-app" style="width:100%"></div></div><span class="fn-num" id="rc-n-app">67</span></div>
+        <div class="fn-row"><span class="fn-name">Interviews</span><div class="fn-bar"><div class="fn-fill b" id="rc-bar-int" style="width:35%"></div></div><span class="fn-num" id="rc-n-int">23</span></div>
+        <div class="fn-row"><span class="fn-name">Recruited</span><div class="fn-bar"><div class="fn-fill c" id="rc-bar-rec" style="width:14%"></div></div><span class="fn-num" id="rc-n-rec">9</span></div>
+      </div>
+    </div>
+
+    <div class="sub-label reveal">Step by step, platform by platform</div>
+    <div class="plat reveal">
+      <div class="plat-head"><span class="plat-name">Meta (Facebook &amp; Instagram)</span><span class="plat-tag">Best for local volume</span></div>
+      <ol class="plat-steps">
+        <li>In Meta Ads Manager, create a campaign and choose the Leads objective (collect applicants with an instant form) or Traffic (send them to an application page).</li>
+        <li>Critical: when asked "is your ad about credit, employment, housing, or social issues?" select Employment. This is required for hiring ads and locks your targeting.</li>
+        <li>Set location to your service area by city or region — ZIP codes are not allowed, and Meta auto-expands to a 15-mile radius. Leave age at 18-65+ and all genders.</li>
+        <li>Skip lookalikes and detailed interest targeting (unavailable for this category). Lean on broad reach and strong creative to find the right people.</li>
+        <li>Build a short vertical video or image. Lead with the opportunity: flexible schedule, weekly pay potential, paid training, no experience needed. Keep claims honest.</li>
+        <li>If using a lead form, ask only for name, phone, email, and availability — you cannot collect age, gender, or ZIP. Keep your consent line and privacy link.</li>
+        <li>Start at $20-40/day, optimize for leads, and review applicants daily. Respond within minutes while interest is hot.</li>
+      </ol>
+      <div class="plat-note"><b>Budget:</b> Roughly $20-40/day to start. You pay per lead; cost per applicant varies by market.</div>
+    </div>
+    <div class="plat reveal">
+      <div class="plat-head"><span class="plat-name">TikTok</span><span class="plat-tag">Best for younger reps</span></div>
+      <ol class="plat-steps">
+        <li>Create a TikTok Ads Manager account and a new campaign; choose the Lead Generation objective.</li>
+        <li>Pick an Instant Form (native and fastest) or send traffic to your application page.</li>
+        <li>Target your area by location. TikTok skews younger, which suits entry-level door-to-door roles. Follow non-discrimination rules and avoid targeting protected traits.</li>
+        <li>Make native, authentic vertical video — a rep day-in-the-life, a "how I started knocking doors" POV, with a fast hook in the first two seconds. Polished corporate ads underperform here.</li>
+        <li>Build the lead form (name, phone, email, availability) with your consent line. Keep claims truthful, no income guarantees.</li>
+        <li>Start at $20-50/day, let it run a few days to learn, then scale the winning creative.</li>
+      </ol>
+      <div class="plat-note"><b>Budget:</b> Around $20-50/day. Native UGC-style video far outperforms anything that looks like an ad.</div>
+    </div>
+    <div class="plat reveal">
+      <div class="plat-head"><span class="plat-name">Indeed</span><span class="plat-tag">Best for steady applicant flow</span></div>
+      <ol class="plat-steps">
+        <li>Create a free Indeed employer account and post the role (for example, "Door-to-door sales rep — 1099, commission"). Be clear it is independent-contractor and commission-based.</li>
+        <li>Add screener questions and deal-breakers (reliable transportation, comfortable with commission, weekend availability) so unqualified applicants are filtered out.</li>
+        <li>Free posts get buried within a day, so Sponsor the job to keep it visible. Sponsored Jobs run a pay-per-click auction: set a daily or monthly budget and pay when seekers click or start an application.</li>
+        <li>Indeed suggests a budget; the floor is $5/day, but each sponsored posting needs at least $25/day to run. Effective cost per application usually lands around $15-50 by role and market.</li>
+        <li>Review applicants daily, message strong ones immediately, and pause the sponsorship anytime once you have enough.</li>
+      </ol>
+      <div class="plat-note"><b>Budget:</b> Free to post; $25/day minimum to sponsor. Plan on roughly $15-50 per application.</div>
+    </div>
+    <div class="plat reveal">
+      <div class="plat-head"><span class="plat-name">ZipRecruiter</span><span class="plat-tag">Best for wide distribution</span></div>
+      <ol class="plat-steps">
+        <li>Create an employer account. ZipRecruiter is subscription-based per job slot with a short 2-4 day free trial that requires a card and auto-converts — get cancellation terms in writing first.</li>
+        <li>Post the job; ZipRecruiter distributes it to 100+ boards and uses AI matching to surface candidates.</li>
+        <li>Use "Invite to apply" to proactively reach matched candidates instead of waiting for applications.</li>
+        <li>Add screening questions. A TrafficBoost add-on can push a posting higher in results but costs extra.</li>
+        <li>Pricing is not public (custom quotes, roughly $299-899/mo per slot). Ask for a small-business discount and confirm exactly what is included before subscribing.</li>
+      </ol>
+      <div class="plat-note"><b>Budget:</b> Subscription, about $299+/mo per job slot. Best when you are hiring continuously.</div>
+    </div>
+    <div class="plat reveal">
+      <div class="plat-head"><span class="plat-name">Google Search</span><span class="plat-tag">Best for high-intent seekers</span></div>
+      <ol class="plat-steps">
+        <li>In Google Ads, create a Search campaign and accept the employment policy acknowledgment Google shows for hiring ads.</li>
+        <li>Target your area by city or radius (minimum about 1 km). ZIP-code targeting and age, gender, parental, or marital targeting are blocked for employment ads.</li>
+        <li>Bid on intent keywords: "sales jobs near me," "door to door sales jobs," "commission sales rep [city]," "1099 sales jobs."</li>
+        <li>Add negative keywords to cut waste, such as "remote" or "work from home" if those do not apply.</li>
+        <li>Write ads that lead with the opportunity and location, and send clicks to a simple application or lead page. Track form submissions as conversions.</li>
+        <li>Also list the role free on Google for Jobs by posting it on your site or a connected board — it appears in search at no cost.</li>
+      </ol>
+      <div class="plat-note"><b>Budget:</b> Pay per click on hiring keywords. Pair the paid search with the free Google for Jobs listing.</div>
+    </div>
+
+    <div class="plat reveal">
+      <div class="plat-head"><span class="plat-name">LinkedIn</span><span class="plat-tag">Best for warm reach</span></div>
+      <ol class="plat-steps">
+        <li>Post the role free on LinkedIn (one free listing at a time, visible about 14 days) and share it to your network and any local groups.</li>
+        <li>To reach more people, promote the post — it runs a pay-per-click auction. Set a daily or total budget (minimum about $7-10/day) and you only pay for clicks from candidates.</li>
+        <li>Expect roughly $1.50-4.50 per click, often a low cost per applicant, though door-to-door sales is less native here than the job boards.</li>
+        <li>Add screening questions and route applicants to your form or ATS.</li>
+        <li>Keep your company page active with rep spotlights and culture so warm candidates already know you.</li>
+      </ol>
+      <div class="plat-note"><b>Budget:</b> Free to post; promote from about $7-10/day on a pay-per-click model.</div>
+    </div>
+    <div class="plat reveal">
+      <div class="plat-head"><span class="plat-name">Snapchat</span><span class="plat-tag">Best for Gen Z reach</span></div>
+      <ol class="plat-steps">
+        <li>Create a Snapchat Ads account in Ads Manager and a new campaign; choose Lead Generation, or Traffic to your application page.</li>
+        <li>Use a Snap lead form or send clicks to your form. Target your area — Snapchat skews very young, good for entry-level field roles.</li>
+        <li>Shoot full-screen, sound-on, native vertical video — fast and authentic, a rep talking to camera.</li>
+        <li>Follow non-discrimination rules and keep claims honest, with no income guarantees.</li>
+        <li>Start small at $15-30/day and scale the creative that earns the cheapest leads.</li>
+      </ol>
+      <div class="plat-note"><b>Budget:</b> Around $15-30/day. Reaches the youngest field-sales candidates.</div>
+    </div>
+    <div class="plat reveal">
+      <div class="plat-head"><span class="plat-name">Craigslist</span><span class="plat-tag">Best for cheap local</span></div>
+      <ol class="plat-steps">
+        <li>Go to the Craigslist page for your metro, choose "create a posting," then "job offered."</li>
+        <li>Pick the jobs category. US posts are paid, roughly $10-75 depending on city (San Francisco runs highest); there is no free jobs option in the US.</li>
+        <li>Use a plain, searchable title like "Sales rep — door to door — [city]" rather than a clever one; clear titles get more responses.</li>
+        <li>Describe the 1099 commission role honestly and add a simple apply method (your form or email).</li>
+        <li>Posts run about 30 days, then you repost and pay again. You can also browse the free resume section for your city.</li>
+      </ol>
+      <div class="plat-note"><b>Budget:</b> About $10-75 per 30-day post by metro. Cheap, local, blue-collar reach.</div>
+    </div>
+    <div class="plat reveal">
+      <div class="plat-head"><span class="plat-name">Nextdoor</span><span class="plat-tag">Best for hyperlocal trust</span></div>
+      <ol class="plat-steps">
+        <li>Create a Nextdoor business page; you can post your opening to local neighborhoods organically for free.</li>
+        <li>For more reach, run Nextdoor local ads targeted to the neighborhoods you canvass.</li>
+        <li>Lean into the local angle — hiring neighbors for local field work — since Nextdoor users trust nearby businesses.</li>
+        <li>Route interested neighbors to your form and respond fast and personally.</li>
+        <li>Pair it with real local presence (yard signs, community boards) for compounding trust.</li>
+      </ol>
+      <div class="plat-note"><b>Budget:</b> Free organic posts; paid local ads optional. Strong neighborhood trust.</div>
+    </div>
+
+    <div class="sub-label reveal">More ways to recruit (beyond paid ads)</div>
+    <div class="strat-grid reveal">
+      <div class="strat-card">
+        <div class="sc-name">Rep referral program <span class="sc-dom">Highest quality</span></div>
+        <div class="sc-principle">Your best reps know other good salespeople. Pay a referral bounty for every referred rep who gets recruited and starts producing.</div>
+        <div class="sc-apply"><b>Run it:</b> offer a clear bonus, make referring easy, and pay promptly.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Recruit from your content <span class="sc-dom">Organic</span></div>
+        <div class="sc-principle">The Recruit pillar of your organic engine: day-in-the-life clips and earnings-honest stories pull in applicants for free.</div>
+        <div class="sc-apply"><b>Run it:</b> end recruiting videos with a simple apply link in your bio.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Re-engage past applicants <span class="sc-dom">Free pipeline</span></div>
+        <div class="sc-principle">People who applied before but never started are warm. A quick text or call often restarts them.</div>
+        <div class="sc-apply"><b>Run it:</b> keep every applicant on file and follow up monthly.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Recruit your customers <span class="sc-dom">Built-in trust</span></div>
+        <div class="sc-principle">Outgoing, happy customers already believe in the product and make natural reps.</div>
+        <div class="sc-apply"><b>Run it:</b> when a customer lights up at the door, plant the seed that you are hiring.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Local presence <span class="sc-dom">Ground game</span></div>
+        <div class="sc-principle">Flyers and tear-off tabs at gyms, gas stations, coffee shops, and community boards reach local hustlers cheaply.</div>
+        <div class="sc-apply"><b>Run it:</b> post a clean flyer with a QR code to your form.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Campus and job fairs <span class="sc-dom">Volume</span></div>
+        <div class="sc-principle">Trade schools, community colleges, and local job fairs are full of motivated people open to commission work.</div>
+        <div class="sc-apply"><b>Run it:</b> show up with a simple pitch and same-day interviews.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Community groups and texts <span class="sc-dom">Word of mouth</span></div>
+        <div class="sc-principle">Local Facebook groups, group chats, and Nextdoor threads spread an opening fast when it is genuine.</div>
+        <div class="sc-apply"><b>Run it:</b> post as a person, not a corporate ad, and reply to everyone.</div>
+      </div>
+    </div>
+
+    <div class="sub-label reveal">Recruiting hooks you can run</div>
+    <div class="hook-col reveal">
+      <div class="hc-head">For the opportunity</div>
+      <ul>
+          <li>Now hiring in [your city]: flexible hours, weekly pay potential, no experience needed.</li>
+          <li>Want to control your own income? We are hiring door-to-door sales reps.</li>
+          <li>No degree required. Paid training and a real path to grow.</li>
+          <li>Tired of hourly pay caps? On commission, your effort sets your ceiling.</li>
+          <li>Outgoing and self-motivated? Turn conversations into 1099 income.</li>
+          <li>Work your own schedule, build real sales skills, and get paid for results.</li>
+          <li>More than a 9-to-5: now hiring reps who want to bet on themselves.</li>
+          <li>Love being outside and meeting people? This 1099 sales role is for you.</li>
+      </ul>
+    </div>
+
+    <div class="sub-label reveal">What to budget</div>
+    <div class="pillars reveal">
+      <div class="pillar"><div class="pi-n">Indeed</div><h4>$15-50</h4><p>Per application (pay-per-click); $25/day minimum per sponsored post.</p></div>
+      <div class="pillar"><div class="pi-n">ZipRecruiter</div><h4>$299+/mo</h4><p>Subscription per job slot; short paid trial, custom quotes.</p></div>
+      <div class="pillar"><div class="pi-n">Meta / TikTok</div><h4>$20-50/day</h4><p>Start small, optimize for leads, then scale the winners.</p></div>
+      <div class="pillar"><div class="pi-n">Google</div><h4>Per click</h4><p>Bid on hiring keywords; track application submissions.</p></div>
+    </div>
+    <p class="mini-note" style="font-style:normal">Log recruiting spend in the Tracker like any other channel, so you can see your true cost per hire over time.</p>
+
+    <div class="prohibit reveal" style="margin-top:36px">
+      <h3>⛔ Recruiting compliance</h3>
+      <ul>
+        <li>On Meta select the Employment special ad category; on Google accept the employment policy. No targeting or excluding by age, gender, ZIP, or other protected traits, and no ZIP-radius (Meta expands to 15 miles)</li>
+        <li>Describe the role honestly as a 1099 independent contractor on commission — never imply it is a salaried W-2 job, and follow your state's contractor rules (in California, AB5 and the Borello test)</li>
+        <li>Never promise or imply guaranteed earnings; any income statement must be truthful and substantiated</li>
+        <li>Welcome all qualified applicants and screen only on real job requirements, never on protected characteristics</li>
+        <li>Lead forms keep your consent box and privacy link, and do not collect age, gender, or ZIP</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- JOB POSTS -->
+<section class="section" id="jobposts">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <div class="eyebrow">Recruiting assets</div>
+      <h2>Ready-to-paste job posts</h2>
+      <p>Copy any version straight into the platform. Each one is written for how that channel actually reads.</p>
+    </div>
+    <div class="keyrule reveal">
+      <p><b>Before you post.</b> Replace every [bracket] with your details. Products are kept generic on purpose — add carrier brand names only if your agreement allows. Never list a guaranteed income; only add an earnings range you can actually back up.</p>
+    </div>
+    <div class="jd-block reveal">
+      <div class="jd-head"><span class="jd-title">Indeed &amp; ZipRecruiter — full posting</span><button class="jd-copy" type="button">Copy</button></div>
+      <div class="jd-text">Door-to-Door Sales Representative — 1099 Independent Contractor (Commission)
+
+Complete Home Today LLC is hiring outgoing, self-motivated independent sales representatives to bring fiber internet and home security to homes across [your territory]. This is a 1099 independent-contractor, commission-based role with uncapped earning potential, paid training, and the freedom to set your own schedule.
+
+No sales experience required — just energy, a strong work ethic, and a willingness to learn. We train you on everything.
+
+What you will do
+• Go door to door in assigned neighborhoods and talk with homeowners about faster internet and home security
+• Explain the benefits, check availability, and help interested customers sign up
+• Represent Complete Home Today honestly and professionally
+• Track your activity and follow up with potential customers
+
+What we offer
+• Commission-based pay with uncapped earning potential — your effort sets your income
+• Paid training and ongoing coaching
+• Flexible schedule — you control your hours as an independent contractor
+• Bonuses and incentives for top performers
+• A clear path to grow into team-lead and management roles
+• A supportive, high-energy team
+
+What we are looking for
+• 18 or older with reliable transportation and a smartphone
+• Friendly, confident, and comfortable meeting new people
+• Self-motivated and goal-driven
+• Able to work outdoors and on your feet
+• No experience required — we train you
+
+The details
+• Status: 1099 independent contractor (not a W-2 employee)
+• Pay: commission-based [add a realistic, substantiated earnings range here, or remove this line]
+• Schedule: flexible, set your own hours
+• Location: in person, door to door in [city / territory]
+
+How to apply
+Apply here [application link], call or text (408) 909-4484, or email Completehometodayllc@gmail.com. We respond quickly — qualified applicants can interview this week.
+
+Complete Home Today LLC welcomes applicants of all backgrounds and is committed to equal opportunity.</div>
+    </div>
+    <div class="jd-block reveal">
+      <div class="jd-head"><span class="jd-title">LinkedIn — professional</span><button class="jd-copy" type="button">Copy</button></div>
+      <div class="jd-text">Sales Representative (1099, Commission) — Complete Home Today LLC
+
+Complete Home Today LLC is growing our field sales team and looking for driven, people-first independent representatives to bring fiber internet and home security to homeowners in [your territory].
+
+This is a 1099 independent-contractor role built for people who want to control their own income and schedule. Strong communicators with a competitive streak do very well here, with or without formal sales experience.
+
+What you will do: meet homeowners in assigned neighborhoods, understand their needs, and help them upgrade their internet and protect their homes under the Complete Home Today brand, with full training and support.
+
+Why people join us
+• Uncapped, commission-based earning potential
+• Paid training and real mentorship
+• Flexible, self-directed schedule
+• A genuine path into leadership
+
+What we look for: self-motivation, strong communication, reliable transportation, and a willingness to learn. No degree required.
+
+Interested? Apply here [application link], or reach out at Completehometodayllc@gmail.com or (408) 909-4484.
+
+Complete Home Today LLC is an equal-opportunity company and welcomes applicants of all backgrounds.</div>
+    </div>
+    <div class="jd-block reveal">
+      <div class="jd-head"><span class="jd-title">Craigslist — plain &amp; local</span><button class="jd-copy" type="button">Copy</button></div>
+      <div class="jd-text">Door-to-Door Sales Rep — Commission, Flexible Hours — [City]
+
+Complete Home Today LLC is hiring door-to-door sales reps in [city]. We sell fiber internet and home security, and we need outgoing people who enjoy talking with others and want to control their own income.
+
+This is a 1099 independent-contractor, commission-based position. No experience needed — we provide paid training.
+
+What you get
+• Commission pay with uncapped potential
+• Paid training
+• Flexible schedule — set your own hours
+• Bonuses for top performers
+
+What you need
+• 18+, reliable transportation, and a smartphone
+• A positive attitude and strong work ethic
+• Willingness to work outdoors, door to door
+
+To apply: call or text (408) 909-4484, email Completehometodayllc@gmail.com, or reply to this post. We welcome applicants of all backgrounds.</div>
+    </div>
+    <div class="jd-block reveal">
+      <div class="jd-head"><span class="jd-title">Facebook &amp; Nextdoor — social post</span><button class="jd-copy" type="button">Copy</button></div>
+      <div class="jd-text">Now hiring in [your area]!
+
+Complete Home Today is looking for outgoing, motivated people to join our door-to-door sales team — fiber internet and home security.
+
+✓ Commission-based with uncapped potential
+✓ Paid training, no experience needed
+✓ Flexible schedule — you set your hours
+✓ A real path to grow
+
+It is a 1099 independent-contractor role for people who want to bet on themselves. Reliable transportation and a smartphone required, 18+.
+
+Apply: [application link] or call/text (408) 909-4484. All backgrounds welcome.</div>
+    </div>
+    <div class="jd-block reveal">
+      <div class="jd-head"><span class="jd-title">TikTok &amp; Snapchat — caption + hooks</span><button class="jd-copy" type="button">Copy</button></div>
+      <div class="jd-text">CAPTION
+We are hiring door-to-door reps in [your area]. Flexible hours, paid training, uncapped commission. A 1099 role for people who want to bet on themselves. Apply at the link in bio.  #hiring #salesjobs #[yourcity]jobs #1099 #commissionsales
+
+VIDEO HOOK IDEAS (say to camera in the first 2 seconds)
+• POV: you got tired of your hourly cap and started knocking doors instead.
+• Want a job where your paycheck is not capped? Here is what we actually do.
+• Hiring in [your city] — no experience, paid training, you set your own schedule.
+
+Keep it authentic: film a quick day-in-the-life or a rep talking honestly about the work. Show the flexibility and the lifestyle, and never promise guaranteed income.</div>
+    </div>
+    <div class="jd-block reveal">
+      <div class="jd-head"><span class="jd-title">Referral / text outreach</span><button class="jd-copy" type="button">Copy</button></div>
+      <div class="jd-text">REFERRAL TEXT / DM
+Hey [name] — Complete Home Today is hiring door-to-door sales reps (fiber internet and home security). It is 1099 and commission-based with paid training and a flexible schedule, and I think you would be great at it. Want me to send details? You can also apply here: [application link] or call/text (408) 909-4484.</div>
+    </div>
+  </div>
+</section>
+
 <!-- ORGANIC -->
 <section class="section" id="organic">
   <div class="wrap">
@@ -1384,6 +1835,184 @@ footer .wrap{display:flex;flex-direction:column;gap:10px}
     }
     [bEl,cplEl,qEl,clEl,rEl].forEach(function(el){ el.addEventListener("input", recompute); });
     recompute();
+  })();
+
+  // ---- Performance tracker: sales + recruiting, persist, refer back over time ----
+  (function(){
+    if(!$("pl-list")){ return; }
+    var KEY="cht_perf_log_v1";
+    var cat="sales";
+    var fD=$("pl-date"), fSp=$("pl-spend");
+    var fL=$("pl-leads"), fQ=$("pl-qual"), fSa=$("pl-sales"), fR=$("pl-rev");
+    var fAp=$("pl-applicants"), fIn=$("pl-interviews"), fRe=$("pl-recruited");
+    function load(){ try{ var r=localStorage.getItem(KEY); var a=r?JSON.parse(r):[]; a.forEach(function(e){ if(!e.cat){ e.cat="sales"; } }); return a; }catch(e){ return []; } }
+    function store(a){ try{ localStorage.setItem(KEY, JSON.stringify(a)); }catch(e){} }
+    function n(v){ var x=parseFloat(v); return (isFinite(x)&&x>0)?x:0; }
+    function fnum(x){ return Math.round(x).toLocaleString("en-US"); }
+    function smoney(x){ return (x<0?"-":"")+"$"+Math.abs(Math.round(x)).toLocaleString("en-US"); }
+    function pctf(x){ return (Math.round(x*10)/10)+"%"; }
+    function clamp(v,lo,hi){ return Math.max(lo,Math.min(hi,v)); }
+    function dlabel(d){ if(!d){ return "Entry"; } var pp=d.split("-"); if(pp.length===3){ return pp[1]+"/"+pp[2]+"/"+pp[0].slice(2); } return d; }
+    function stat(l,v,cls){ return '<div class="pl-stat '+(cls||"")+'"><div class="ps-l">'+l+'</div><div class="ps-v">'+v+'</div></div>'; }
+    function met(l,v,accent){ return '<div><span class="m-l">'+l+'</span><span class="m-v'+(accent?" accent":"")+'">'+v+'</span></div>'; }
+    function setCat(c){
+      cat=c;
+      $("pl-cat-sales").classList.toggle("active", c==="sales");
+      $("pl-cat-rec").classList.toggle("active", c==="recruiting");
+      document.querySelectorAll(".pl-form .sales-f").forEach(function(x){ x.style.display = c==="sales"?"":"none"; });
+      document.querySelectorAll(".pl-form .rec-f").forEach(function(x){ x.style.display = c==="recruiting"?"":"none"; });
+      var ap=$("pl-apply"); if(ap){ ap.textContent = (c==="sales") ? "Apply my averages to the sales calculator" : "Apply my averages to the recruiting calculator"; }
+    }
+    function render(){
+      var a=load();
+      a.sort(function(x,y){ return (x.date<y.date)?1:((x.date>y.date)?-1:0); });
+      var sArr=a.filter(function(e){ return e.cat!=="recruiting"; });
+      var tSp=0,tL=0,tQ=0,tSa=0,tR=0;
+      sArr.forEach(function(e){ tSp+=e.spend; tL+=e.leads||0; tQ+=e.qualified||0; tSa+=e.sales||0; tR+=e.revenue||0; });
+      var cpl=tL>0?tSp/tL:0, closeR=tL>0?(tSa/tL*100):0, roas=tSp>0?tR/tSp:0, profit=tR-tSp;
+      $("pl-summary").innerHTML =
+        stat("Spend", money(tSp)) + stat("Leads", fnum(tL)) + stat("Sales", fnum(tSa)) + stat("Revenue", money(tR)) +
+        stat("Avg CPL", money(cpl)) + stat("Close rate", pctf(closeR)) +
+        stat("ROAS", (Math.round(roas*10)/10)+"x", roas>=1?"good":"") +
+        stat("Profit", smoney(profit), profit>=0?"good":"");
+      var rArr=a.filter(function(e){ return e.cat==="recruiting"; });
+      var rSp=0,rAp=0,rIn=0,rRe=0;
+      rArr.forEach(function(e){ rSp+=e.spend; rAp+=e.applicants||0; rIn+=e.interviews||0; rRe+=e.recruited||0; });
+      var cpa=rAp>0?rSp/rAp:0, cpi=rIn>0?rSp/rIn:0, cph=rRe>0?rSp/rRe:0, i2a=rAp>0?(rIn/rAp*100):0;
+      $("pl-summary-rec").innerHTML =
+        stat("Spend", money(rSp)) + stat("Applicants", fnum(rAp)) + stat("Interviews", fnum(rIn)) + stat("Recruited", fnum(rRe), rRe>0?"good":"") +
+        stat("Cost / applicant", money(cpa)) + stat("Cost / interview", money(cpi)) +
+        stat("Cost / hire", money(cph), rRe>0?"good":"") + stat("Interview rate", pctf(i2a));
+      if(!a.length){ $("pl-list").innerHTML = '<div class="pl-empty">No entries yet. Pick Sales or Recruiting above and add your first entry.</div>'; return; }
+      var html="";
+      a.forEach(function(e){
+        if(e.cat==="recruiting"){
+          var eCpa=e.applicants>0?e.spend/e.applicants:0, eI2a=e.applicants>0?(e.interviews/e.applicants*100):0, eCph=e.recruited>0?e.spend/e.recruited:0;
+          html += '<div class="pl-entry"><div class="pe-top"><span class="pe-date">'+dlabel(e.date)+'<span class="pe-badge rec">Recruiting</span></span><button class="pe-del" data-del="'+e.id+'" title="Delete entry">×</button></div><div class="pe-metrics">'
+            + met("Spend", money(e.spend)) + met("Applicants", fnum(e.applicants)) + met("Interviews", fnum(e.interviews)) + met("Recruited", fnum(e.recruited))
+            + met("Cost / app", money(eCpa), 1) + met("Interview %", pctf(eI2a), 1) + met("Cost / hire", money(eCph), 1)
+            + '</div></div>';
+        } else {
+          var eCpl=e.leads>0?e.spend/e.leads:0, eClose=e.leads>0?(e.sales/e.leads*100):0, eRoas=e.spend>0?e.revenue/e.spend:0;
+          html += '<div class="pl-entry"><div class="pe-top"><span class="pe-date">'+dlabel(e.date)+'<span class="pe-badge sales">Sales</span></span><button class="pe-del" data-del="'+e.id+'" title="Delete entry">×</button></div><div class="pe-metrics">'
+            + met("Spend", money(e.spend)) + met("Leads", fnum(e.leads)) + met("Sales", fnum(e.sales)) + met("Revenue", money(e.revenue))
+            + met("CPL", money(eCpl), 1) + met("Close", pctf(eClose), 1) + met("ROAS", (Math.round(eRoas*10)/10)+"x", 1)
+            + '</div></div>';
+        }
+      });
+      $("pl-list").innerHTML = html;
+    }
+    function add(){
+      var base={ id:String(Date.now())+Math.floor(Math.random()*1000), date:(fD.value||new Date().toISOString().slice(0,10)), cat:cat, spend:n(fSp.value) };
+      if(cat==="recruiting"){
+        base.applicants=n(fAp.value); base.interviews=n(fIn.value); base.recruited=n(fRe.value);
+        if(base.spend===0 && base.applicants===0 && base.interviews===0 && base.recruited===0){ return; }
+      } else {
+        base.leads=n(fL.value); base.qualified=n(fQ.value); base.sales=n(fSa.value); base.revenue=n(fR.value);
+        if(base.spend===0 && base.leads===0 && base.sales===0 && base.revenue===0){ return; }
+      }
+      var a=load(); a.push(base); store(a);
+      fSp.value=""; fL.value=""; fQ.value=""; fSa.value=""; fR.value=""; fAp.value=""; fIn.value=""; fRe.value="";
+      render();
+    }
+    function del(id){ store(load().filter(function(x){ return String(x.id)!==String(id); })); render(); }
+    function expt(){
+      var blob=new Blob([JSON.stringify(load(),null,2)],{type:"application/json"});
+      var url=URL.createObjectURL(blob);
+      var aEl=document.createElement("a"); aEl.href=url; aEl.download="cht-performance-log.json";
+      document.body.appendChild(aEl); aEl.click(); document.body.removeChild(aEl); URL.revokeObjectURL(url);
+    }
+    function impt(file){
+      var rd=new FileReader();
+      rd.onload=function(){ try{ var imp=JSON.parse(rd.result); if(!Array.isArray(imp)){ return; }
+        var a=load(); var seen={}; a.forEach(function(x){ seen[String(x.id)]=true; });
+        imp.forEach(function(x){ if(x && !seen[String(x.id)]){ a.push({ id:x.id||(String(Date.now())+Math.floor(Math.random()*1000)), date:x.date||"", cat:(x.cat==="recruiting"?"recruiting":"sales"), spend:n(x.spend), leads:n(x.leads), qualified:n(x.qualified), sales:n(x.sales), revenue:n(x.revenue), applicants:n(x.applicants), interviews:n(x.interviews), recruited:n(x.recruited) }); } });
+        store(a); render();
+      }catch(e){} };
+      rd.readAsText(file);
+    }
+    function setSlider(id,val){ var el=$(id); if(el){ el.value=val; el.dispatchEvent(new Event("input",{bubbles:true})); } }
+    function applyAvg(){
+      var a=load();
+      if(cat==="recruiting"){
+        var r=a.filter(function(e){ return e.cat==="recruiting"; }); if(!r.length){ return; }
+        var rSp=0,rAp=0,rIn=0,rRe=0; r.forEach(function(e){ rSp+=e.spend; rAp+=e.applicants||0; rIn+=e.interviews||0; rRe+=e.recruited||0; });
+        if(rAp===0){ return; }
+        setSlider("rc-cpa", Math.round(clamp(rSp/rAp,2,60)));
+        setSlider("rc-i2a", Math.round(clamp(rAp>0?(rIn/rAp*100):0,5,80)));
+        setSlider("rc-i2h", Math.round(clamp(rIn>0?(rRe/rIn*100):0,5,90)));
+      } else {
+        var sv=a.filter(function(e){ return e.cat!=="recruiting"; }); if(!sv.length){ return; }
+        var tSp=0,tL=0,tQ=0,tSa=0,tR=0; sv.forEach(function(e){ tSp+=e.spend; tL+=e.leads||0; tQ+=e.qualified||0; tSa+=e.sales||0; tR+=e.revenue||0; });
+        if(tL===0){ return; }
+        var effQ=(tQ>0)?tQ:tL;
+        setSlider("lk-cpl", Math.round(clamp(tSp/tL,5,80)));
+        setSlider("lk-qual", Math.round(clamp(effQ/tL*100,10,80)));
+        setSlider("lk-close", Math.round(clamp(effQ>0?(tSa/effQ*100):0,5,70)));
+        if(tSa>0){ setSlider("lk-rev", Math.round(clamp(tR/tSa,50,800)/10)*10); }
+      }
+      var btn=$("pl-apply"); if(btn){ var t=btn.textContent; btn.textContent="Calculator updated ✓"; setTimeout(function(){ btn.textContent=t; }, 1800); }
+    }
+    $("pl-cat-sales").addEventListener("click", function(){ setCat("sales"); });
+    $("pl-cat-rec").addEventListener("click", function(){ setCat("recruiting"); });
+    $("pl-add").addEventListener("click", add);
+    $("pl-apply").addEventListener("click", applyAvg);
+    $("pl-export").addEventListener("click", expt);
+    $("pl-import-btn").addEventListener("click", function(){ $("pl-import").click(); });
+    $("pl-import").addEventListener("change", function(ev){ if(ev.target.files && ev.target.files[0]){ impt(ev.target.files[0]); ev.target.value=""; } });
+    $("pl-list").addEventListener("click", function(ev){ var b=ev.target.closest ? ev.target.closest("[data-del]") : null; if(b){ del(b.getAttribute("data-del")); } });
+    if(fD && !fD.value){ fD.value=new Date().toISOString().slice(0,10); }
+    setCat("sales");
+    render();
+  })();
+
+  // ---- Recruiting funnel calculator ----
+  (function(){
+    var bEl=$("rc-budget"), cpaEl=$("rc-cpa"), iaEl=$("rc-i2a"), ihEl=$("rc-i2h");
+    if(!bEl){ return; }
+    function num(x){ return Math.round(x).toLocaleString("en-US"); }
+    function recompute(){
+      var budget=+bEl.value, cpa=+cpaEl.value, ia=(+iaEl.value)/100, ih=(+ihEl.value)/100;
+      $("rc-budget-v").textContent=money(budget);
+      $("rc-cpa-v").textContent=money(cpa);
+      $("rc-i2a-v").textContent=(+iaEl.value)+"%";
+      $("rc-i2h-v").textContent=(+ihEl.value)+"%";
+      var apps=cpa>0?budget/cpa:0, ints=apps*ia, recs=ints*ih;
+      var cpi=ints>0?budget/ints:0, cph=recs>0?budget/recs:0;
+      $("rc-applicants").textContent=num(apps);
+      $("rc-interviews").textContent=num(ints);
+      $("rc-recruited").textContent=num(recs);
+      $("rc-cpa-out").textContent=money(cpa);
+      $("rc-cpi").textContent=money(cpi);
+      $("rc-cph").textContent=money(cph);
+      var base=apps||1;
+      $("rc-bar-app").style.width="100%";
+      $("rc-bar-int").style.width=Math.max(2,(ints/base)*100)+"%";
+      $("rc-bar-rec").style.width=Math.max(2,(recs/base)*100)+"%";
+      $("rc-n-app").textContent=num(apps);
+      $("rc-n-int").textContent=num(ints);
+      $("rc-n-rec").textContent=num(recs);
+    }
+    [bEl,cpaEl,iaEl,ihEl].forEach(function(el){ el.addEventListener("input", recompute); });
+    recompute();
+  })();
+
+  // ---- Job post copy buttons ----
+  (function(){
+    function fallback(txt){
+      try{ var ta=document.createElement("textarea"); ta.value=txt; ta.style.position="fixed"; ta.style.left="-9999px"; document.body.appendChild(ta); ta.focus(); ta.select(); document.execCommand("copy"); document.body.removeChild(ta); }catch(e){}
+    }
+    function flash(btn){ var t=btn.textContent; btn.textContent="Copied ✓"; setTimeout(function(){ btn.textContent=t; }, 1600); }
+    document.querySelectorAll(".jd-copy").forEach(function(btn){
+      btn.addEventListener("click", function(){
+        var block=btn.closest(".jd-block"); if(!block){ return; }
+        var el=block.querySelector(".jd-text"); if(!el){ return; }
+        var txt=el.textContent;
+        if(navigator.clipboard && navigator.clipboard.writeText){
+          navigator.clipboard.writeText(txt).then(function(){ flash(btn); }, function(){ fallback(txt); flash(btn); });
+        } else { fallback(txt); flash(btn); }
+      });
+    });
   })();
 
   // ---- Collapsible sections (every section minimizes / unminimizes) ----
