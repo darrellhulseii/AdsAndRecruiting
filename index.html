@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paid Advertising Plan — Complete Home Today</title>
+<meta name="description" content="Internal daily paid-advertising playbook for Complete Home Today: allowed channels, budget allocation, daily routine, and compliance guardrails.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&family=Roboto+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0a1422; --navy2:#0f1d30; --navy3:#0c1827; --card:#101f33;
+  --ink:#eef3f9; --muted:#9bacc1; --faint:#67788c;
+  --gold:#f5a623; --gold-br:#ffc048;
+  --red:#ec1c34; --green:#1bbda3; --amber:#f5a623;
+  --line:rgba(255,255,255,.08); --line2:rgba(255,255,255,.15);
+  --display:'Archivo',sans-serif; --body:'Hanken Grotesk',sans-serif; --mono:'Roboto Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--navy);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);line-height:1.1}
+
+/* layout */
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+.section{padding:72px 0;border-top:1px solid var(--line)}
+.eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-br);font-weight:600}
+.s-head{margin-bottom:34px;max-width:680px}
+.s-head h2{font-size:clamp(26px,4.4vw,40px);font-weight:900;margin:12px 0 10px;letter-spacing:-.02em}
+.s-head p{color:var(--muted);font-size:16px}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(10,20,34,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1080px;margin:0 auto;padding:13px 22px;display:flex;align-items:center;gap:18px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:900;font-size:16px;letter-spacing:-.01em;white-space:nowrap}
+.brand .mk{width:26px;height:26px;border-radius:7px;background:linear-gradient(135deg,var(--gold),var(--gold-br));display:grid;place-items:center;color:#1a1205;font-size:14px;font-weight:900}
+.nav-links{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap}
+.nav-links a{font-size:13px;color:var(--muted);text-decoration:none;padding:7px 11px;border-radius:8px;font-weight:600;transition:.15s;white-space:nowrap}
+.nav-links a:hover{color:var(--ink);background:rgba(255,255,255,.05)}
+.nav-links a.on{color:var(--gold-br);background:rgba(245,166,35,.1)}
+.nav-tag{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);border:1px solid var(--line2);padding:5px 9px;border-radius:20px;white-space:nowrap}
+@media(max-width:860px){.nav-links{display:none}.nav-tag{margin-left:auto}}
+
+/* hero */
+.hero{position:relative;padding:78px 0 64px;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-180px;right:-120px;width:560px;height:560px;background:radial-gradient(circle,rgba(245,166,35,.16),transparent 62%);pointer-events:none}
+.hero::after{content:"";position:absolute;bottom:-200px;left:-160px;width:520px;height:520px;background:radial-gradient(circle,rgba(27,189,163,.1),transparent 64%);pointer-events:none}
+.hero-in{position:relative}
+.hero h1{font-size:clamp(34px,6vw,62px);font-weight:900;letter-spacing:-.03em;margin:16px 0 16px;max-width:14ch}
+.hero h1 em{font-style:normal;color:var(--gold-br)}
+.hero-lead{font-size:clamp(16px,2.2vw,19px);color:var(--muted);max-width:60ch;margin-bottom:14px}
+.guard-chips{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 40px}
+.guard-chips span{font-size:12.5px;font-weight:600;color:var(--ink);background:rgba(27,189,163,.1);border:1px solid rgba(27,189,163,.3);padding:7px 13px;border-radius:30px}
+.guard-chips span::before{content:"✓ ";color:var(--green);font-weight:800}
+
+/* daily rail (hero signature) */
+.rail{display:grid;grid-template-columns:repeat(3,1fr);gap:0;position:relative;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:linear-gradient(180deg,var(--navy2),var(--navy3))}
+.rail-line{position:absolute;top:64px;left:6%;right:6%;height:2px;background:linear-gradient(90deg,transparent,var(--gold),var(--gold),transparent);opacity:.5;z-index:1}
+.rail-block{padding:26px 22px 24px;position:relative;z-index:2;border-right:1px solid var(--line)}
+.rail-block:last-child{border-right:none}
+.rail-time{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--gold-br);letter-spacing:.05em}
+.rail-dot{width:13px;height:13px;border-radius:50%;background:var(--gold);border:3px solid var(--navy);margin:14px 0;box-shadow:0 0 0 3px rgba(245,166,35,.2)}
+.rail-block h3{font-size:18px;font-weight:800;margin-bottom:5px}
+.rail-block p{font-size:13.5px;color:var(--muted);line-height:1.5}
+@media(max-width:760px){.rail{grid-template-columns:1fr}.rail-block{border-right:none;border-bottom:1px solid var(--line)}.rail-block:last-child{border-bottom:none}.rail-line{display:none}.rail-dot{margin:10px 0}}
+
+/* allowed matrix */
+.matrix{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--card)}
+.mx-row{display:grid;grid-template-columns:1.5fr 1fr 1fr;border-bottom:1px solid var(--line)}
+.mx-row:last-child{border-bottom:none}
+.mx-row.head{background:rgba(255,255,255,.03)}
+.mx-cell{padding:15px 16px;font-size:13.5px;border-right:1px solid var(--line);display:flex;align-items:center;gap:8px}
+.mx-cell:last-child{border-right:none}
+.mx-row.head .mx-cell{font-family:var(--display);font-weight:800;font-size:13px;color:var(--ink)}
+.mx-cell.ch{font-weight:700;color:var(--ink);font-size:14px}
+.tag{font-size:11px;font-weight:700;padding:3px 9px;border-radius:20px;font-family:var(--mono);letter-spacing:.02em;white-space:nowrap;flex:none}
+.t-ok{background:rgba(27,189,163,.14);color:#5fe0cb;border:1px solid rgba(27,189,163,.35)}
+.t-appr{background:rgba(245,166,35,.13);color:var(--gold-br);border:1px solid rgba(245,166,35,.35)}
+.t-no{background:rgba(236,28,52,.13);color:#ff7585;border:1px solid rgba(236,28,52,.35)}
+.mx-note{font-size:12.5px;color:var(--muted)}
+@media(max-width:720px){.mx-row{grid-template-columns:1fr}.mx-cell{border-right:none;border-bottom:1px dashed var(--line)}.mx-cell:last-child{border-bottom:none}.mx-row.head{display:none}.mx-cell.ch{background:rgba(245,166,35,.06);font-size:15px}.mx-cell::before{content:attr(data-l);font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-right:auto}}
+
+/* budget allocator (signature) */
+.alloc{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media(max-width:880px){.alloc{grid-template-columns:1fr}}
+.alloc-card{background:linear-gradient(180deg,var(--navy2),var(--navy3));border:1px solid var(--line2);border-radius:18px;padding:24px}
+.ctl-label{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);display:block;margin-bottom:11px}
+.tier-row{display:flex;gap:8px;margin-bottom:22px}
+.tier-btn{flex:1;background:rgba(255,255,255,.04);border:1px solid var(--line2);color:var(--muted);font-family:var(--body);font-weight:700;font-size:13px;padding:10px;border-radius:10px;cursor:pointer;transition:.15s}
+.tier-btn:hover{color:var(--ink);border-color:var(--gold)}
+.tier-btn.active{background:linear-gradient(135deg,var(--gold),var(--gold-br));color:#1a1205;border-color:transparent}
+.budget-input{display:flex;align-items:center;gap:11px;margin-bottom:24px}
+.budget-input label{font-size:14px;font-weight:700;color:var(--ink)}
+.money-field{display:flex;align-items:center;background:var(--navy);border:1px solid var(--line2);border-radius:11px;padding:0 13px;flex:1;max-width:170px}
+.money-field span{color:var(--gold-br);font-family:var(--mono);font-weight:700;font-size:18px}
+.money-field input{background:none;border:none;color:var(--ink);font-family:var(--mono);font-weight:700;font-size:22px;padding:11px 6px;width:100%;outline:none}
+.budget-input .per{font-size:13px;color:var(--faint);font-family:var(--mono)}
+.split-row{display:grid;grid-template-columns:120px 1fr 48px;align-items:center;gap:12px;margin-bottom:14px}
+.split-row label{font-size:13px;font-weight:600;display:flex;align-items:center;gap:7px}
+.dot{width:11px;height:11px;border-radius:3px;flex:none}
+.dot-search{background:var(--gold-br)} .dot-social{background:#4aa3ff} .dot-sec{background:#1bbda3}
+.split-pct{font-family:var(--mono);font-size:14px;font-weight:700;color:var(--ink);text-align:right}
+input[type=range]{-webkit-appearance:none;appearance:none;height:6px;background:rgba(255,255,255,.12);border-radius:6px;outline:none}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:18px;height:18px;border-radius:50%;background:var(--gold-br);cursor:pointer;border:3px solid var(--navy2);box-shadow:0 2px 6px rgba(0,0,0,.4)}
+input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--gold-br);cursor:pointer;border:3px solid var(--navy2)}
+.cpl-block{margin-top:22px;padding-top:20px;border-top:1px solid var(--line)}
+.cpl-row{display:flex;gap:9px;flex-wrap:wrap}
+.cpl-field{flex:1;min-width:96px;background:var(--navy);border:1px solid var(--line2);border-radius:10px;padding:9px 11px;font-size:12px;color:var(--muted);display:flex;align-items:center;gap:4px}
+.cpl-field input{background:none;border:none;color:var(--ink);font-family:var(--mono);font-weight:700;font-size:15px;width:100%;outline:none}
+/* output */
+.bar{display:flex;height:22px;border-radius:8px;overflow:hidden;margin-bottom:22px;border:1px solid var(--line)}
+.seg{transition:width .25s ease}
+.seg-search{background:var(--gold-br)} .seg-social{background:#4aa3ff} .seg-sec{background:#1bbda3}
+.out-table{width:100%;border-collapse:collapse}
+.out-table th{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);text-align:right;padding:0 0 10px;font-weight:600}
+.out-table th:first-child{text-align:left}
+.out-table td{padding:11px 0;border-top:1px solid var(--line);font-family:var(--mono);font-size:15px;font-weight:600;text-align:right;color:var(--ink)}
+.out-table td:first-child{text-align:left;font-family:var(--body);font-size:13.5px;font-weight:600;color:var(--muted);display:flex;align-items:center;gap:8px}
+.totals{margin-top:20px;padding-top:18px;border-top:2px solid var(--line2);display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px}
+.totals .tlabel{font-size:13px;color:var(--muted);font-weight:600}
+.totals b{font-family:var(--mono);font-size:26px;font-weight:700;color:var(--gold-br)}
+.totals .leadnum{color:var(--green)}
+.mini-note{font-size:11.5px;color:var(--faint);margin-top:10px;font-style:italic}
+
+/* daily routine cards */
+.day-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:820px){.day-grid{grid-template-columns:1fr}}
+.day-card{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:22px;position:relative}
+.day-card .dc-time{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--gold-br);letter-spacing:.05em}
+.day-card h3{font-size:18px;font-weight:800;margin:6px 0 14px}
+.day-card ul{list-style:none}
+.day-card li{font-size:13.5px;color:var(--muted);padding:7px 0 7px 22px;position:relative;border-top:1px solid var(--line);line-height:1.45}
+.day-card li:first-of-type{border-top:none}
+.day-card li::before{content:"";position:absolute;left:2px;top:14px;width:7px;height:7px;border-radius:50%;background:var(--gold);opacity:.8}
+.sla{margin-top:22px;background:linear-gradient(135deg,rgba(236,28,52,.12),rgba(245,166,35,.08));border:1px solid rgba(245,166,35,.3);border-radius:15px;padding:22px 24px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.sla-num{font-family:var(--display);font-weight:900;font-size:54px;color:var(--gold-br);line-height:1;flex:none}
+.sla-num span{font-size:20px}
+.sla-txt h3{font-size:18px;font-weight:800;margin-bottom:4px}
+.sla-txt p{font-size:14px;color:var(--muted);max-width:60ch}
+
+/* weekly */
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}
+@media(max-width:820px){.week{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:460px){.week{grid-template-columns:1fr}}
+.wday{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:15px 14px}
+.wday .wd{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-br);font-weight:700;margin-bottom:8px}
+.wday p{font-size:12.5px;color:var(--muted);line-height:1.45}
+.wday.peak{border-color:rgba(245,166,35,.4);background:linear-gradient(180deg,rgba(245,166,35,.07),var(--card))}
+
+/* playbook */
+.pb-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:820px){.pb-grid{grid-template-columns:1fr}}
+.pb-card{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:22px}
+.pb-card h3{font-size:17px;font-weight:800;margin-bottom:4px;display:flex;align-items:center;gap:9px}
+.pb-icn{width:30px;height:30px;border-radius:8px;display:grid;place-items:center;font-size:15px;flex:none}
+.pb-search .pb-icn{background:rgba(245,166,35,.15)} .pb-social .pb-icn{background:rgba(74,163,255,.15)} .pb-sec .pb-icn{background:rgba(27,189,163,.15)}
+.pb-card .pb-rule{font-size:12.5px;color:var(--faint);margin-bottom:14px;font-weight:600}
+.pb-card .lbl{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin:14px 0 7px;display:block}
+.ad-ex{background:var(--navy);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:8px;padding:10px 12px;font-size:13px;color:var(--ink);margin-bottom:7px;line-height:1.4}
+.kw{display:inline-block;background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:6px;padding:3px 8px;font-size:11.5px;font-family:var(--mono);color:var(--muted);margin:0 5px 5px 0}
+
+/* compliance / checklist */
+.comp-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;align-items:start}
+@media(max-width:880px){.comp-grid{grid-template-columns:1fr}}
+.checklist{background:linear-gradient(180deg,var(--navy2),var(--navy3));border:1px solid var(--line2);border-radius:18px;padding:24px}
+.cl-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.cl-top h3{font-size:18px;font-weight:800}
+.cl-reset{background:none;border:1px solid var(--line2);color:var(--muted);font-family:var(--body);font-size:12px;font-weight:600;padding:6px 12px;border-radius:8px;cursor:pointer;transition:.15s}
+.cl-reset:hover{color:var(--ink);border-color:var(--red)}
+.cl-prog{font-family:var(--mono);font-size:12px;color:var(--gold-br);margin-bottom:16px}
+.cl-bar{height:5px;background:rgba(255,255,255,.1);border-radius:5px;margin-bottom:18px;overflow:hidden}
+.cl-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--gold),var(--gold-br));width:0;transition:width .3s}
+.cl-item{display:flex;gap:12px;align-items:flex-start;padding:11px 0;border-top:1px solid var(--line);cursor:pointer}
+.cl-item:first-child{border-top:none}
+.cl-box{width:21px;height:21px;border-radius:6px;border:2px solid var(--line2);flex:none;display:grid;place-items:center;margin-top:1px;transition:.15s}
+.cl-item.done .cl-box{background:var(--green);border-color:var(--green)}
+.cl-box svg{width:12px;height:12px;opacity:0;transition:.15s}
+.cl-item.done .cl-box svg{opacity:1}
+.cl-item span{font-size:13.5px;color:var(--muted);transition:.15s}
+.cl-item.done span{color:var(--faint);text-decoration:line-through}
+.prohibit{background:rgba(236,28,52,.06);border:1px solid rgba(236,28,52,.25);border-radius:18px;padding:24px}
+.prohibit h3{font-size:16px;font-weight:800;color:#ff8593;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.prohibit ul{list-style:none}
+.prohibit li{font-size:13px;color:var(--muted);padding:8px 0 8px 24px;position:relative;border-top:1px solid rgba(236,28,52,.12)}
+.prohibit li:first-child{border-top:none}
+.prohibit li::before{content:"✕";position:absolute;left:3px;top:8px;color:var(--red);font-weight:800;font-size:12px}
+.conseq{margin-top:16px;font-size:12.5px;color:var(--faint);line-height:1.5}
+.conseq b{color:#ff8593;font-family:var(--mono)}
+
+/* kpis */
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:820px){.kpi-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:440px){.kpi-grid{grid-template-columns:1fr}}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.kpi .kt{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:5px}
+.kpi .kv{font-family:var(--mono);font-size:13px;color:var(--gold-br);font-weight:600;line-height:1.4}
+
+/* gate */
+.gate{background:linear-gradient(135deg,rgba(245,166,35,.08),rgba(27,189,163,.05));border:1px solid var(--line2);border-radius:18px;padding:26px 26px 22px}
+.gate h3{font-size:19px;font-weight:800;margin-bottom:6px}
+.gate>p{font-size:14px;color:var(--muted);margin-bottom:18px}
+.gate ol{list-style:none;counter-reset:g;display:grid;gap:11px}
+.gate li{counter-increment:g;display:flex;gap:13px;font-size:14px;color:var(--muted);line-height:1.45}
+.gate li::before{content:counter(g);font-family:var(--mono);font-weight:700;font-size:12px;color:#1a1205;background:linear-gradient(135deg,var(--gold),var(--gold-br));width:24px;height:24px;border-radius:7px;display:grid;place-items:center;flex:none}
+.gate li b{color:var(--ink);font-weight:700}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:34px 0 50px;margin-top:20px}
+footer .wrap{display:flex;flex-direction:column;gap:10px}
+.foot-discl{font-size:12px;color:var(--faint);line-height:1.6;max-width:80ch}
+.foot-mark{font-family:var(--display);font-weight:900;font-size:15px}
+
+:focus-visible{outline:2px solid var(--gold-br);outline-offset:3px;border-radius:4px}
+
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+/* organic strategist cards */
+.strat-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:820px){.strat-grid{grid-template-columns:1fr}}
+.strat-card{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:15px;padding:22px}
+.strat-card .sc-name{font-family:var(--display);font-weight:800;font-size:17px;display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px}
+.strat-card .sc-dom{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);font-weight:600;white-space:nowrap}
+.strat-card .sc-quote{font-size:13.5px;color:var(--ink);font-style:italic;border-left:2px solid var(--gold);padding-left:11px;margin:0 0 10px}
+.strat-card .sc-principle{font-size:13.5px;color:var(--muted);line-height:1.5;margin-bottom:12px}
+.strat-card .sc-apply{font-size:13px;color:var(--ink);background:rgba(245,166,35,.07);border-radius:9px;padding:11px 13px;line-height:1.45}
+.strat-card .sc-apply b{color:var(--gold-br);font-weight:700}
+.pillars{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+@media(max-width:820px){.pillars{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:460px){.pillars{grid-template-columns:1fr}}
+.pillar{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 14px}
+.pillar .pi-n{font-family:var(--mono);font-size:11px;color:var(--gold-br);font-weight:700;margin-bottom:7px}
+.pillar h4{font-family:var(--display);font-size:14px;font-weight:800;margin-bottom:5px}
+.pillar p{font-size:12px;color:var(--muted);line-height:1.45}
+.ratio{display:flex;height:36px;border-radius:10px;overflow:hidden;border:1px solid var(--line);font-family:var(--mono);font-weight:700;font-size:12px}
+.ratio .give{background:rgba(27,189,163,.22);color:#7defd9;display:flex;align-items:center;justify-content:center;flex:4}
+.ratio .ask{background:rgba(245,166,35,.22);color:var(--gold-br);display:flex;align-items:center;justify-content:center;flex:1}
+/* collapsible sections */
+.sec-toggle{cursor:pointer;position:relative;padding-right:46px;user-select:none}
+.sec-toggle:hover h2{color:var(--gold-br)}
+.sec-chev{position:absolute;top:2px;right:0;width:30px;height:30px;border:1px solid var(--line2);border-radius:8px;display:flex;align-items:center;justify-content:center;background:var(--card);transition:.2s}
+.sec-chev::before{content:"\2212";color:var(--muted);font-size:18px;font-weight:700;line-height:1}
+.sec-toggle:hover .sec-chev{border-color:var(--gold)}
+.sec-toggle:hover .sec-chev::before{color:var(--gold-br)}
+.section.collapsed .sec-chev::before{content:"\002B"}
+.section.collapsed .sec-toggle{margin-bottom:0}
+.sec-body{overflow:hidden;transition:max-height .32s ease}
+/* principles section */
+.sub-label{font-family:var(--display);font-weight:800;font-size:18px;color:var(--ink);margin:38px 0 16px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.sec-body > .sub-label:first-child{margin-top:0}
+.canon-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:760px){.canon-grid{grid-template-columns:1fr}}
+.canon-item{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:15px 17px}
+.canon-item .cr{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-br);font-weight:600;margin-bottom:5px}
+.canon-item .cn{font-family:var(--display);font-weight:800;font-size:15px;margin-bottom:5px}
+.canon-item p{font-size:13px;color:var(--muted);line-height:1.45}
+.canon-item .cq{color:var(--ink);font-style:italic}
+.denom-list{display:grid;gap:11px}
+.denom-list .d{position:relative;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:12px;padding:15px 18px 15px 54px;counter-increment:d;font-size:14px}
+.denom-list{counter-reset:d}
+.denom-list .d::before{content:counter(d);position:absolute;left:16px;top:15px;font-family:var(--mono);font-weight:700;font-size:16px;color:var(--gold-br)}
+.denom-list .d b{font-family:var(--display);font-weight:800}
+.denom-list .d span{color:var(--muted)}
+/* video library */
+.vid-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:760px){.vid-grid{grid-template-columns:1fr}}
+.vid-card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.vid-frame{aspect-ratio:16/9;width:100%;background:#000}
+.vid-frame iframe{width:100%;height:100%;border:0;display:block}
+.vid-meta{padding:14px 16px}
+.vid-meta .vm-name{font-family:var(--display);font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.vid-meta .vm-tag{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-br);font-weight:600;white-space:nowrap}
+.vid-meta p{font-size:12.5px;color:var(--muted);line-height:1.45;margin-top:5px}
+.vm-link{display:inline-block;margin-top:10px;font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.04em;color:var(--gold-br);text-decoration:none;border-bottom:1px solid transparent}
+.vm-link:hover{border-bottom-color:var(--gold-br)}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-in">
+    <div class="brand"><span class="mk">▲</span> Marketing Plan</div>
+    <div class="nav-links">
+      <a href="#overview" class="on">Overview</a>
+      <a href="#gate">Setup</a>
+      <a href="#channels">Allowed</a>
+      <a href="#budget">Budget</a>
+      <a href="#daily">Daily</a>
+      <a href="#week">Weekly</a>
+      <a href="#playbook">Ads</a>
+      <a href="#organic">Organic</a>
+      <a href="#principles">Principles</a>
+      <a href="#videos">Videos</a>
+      <a href="#compliance">Compliance</a>
+    </div>
+    <span class="nav-tag">Internal · ops</span>
+  </div>
+</nav>
+
+<header class="hero" id="overview">
+  <div class="wrap hero-in">
+    <div class="eyebrow">Complete Home Today · paid advertising</div>
+    <h1>Run compliant marketing, <em>every single day</em></h1>
+    <p class="hero-lead">A daily operating plan for paid and organic lead generation that lives entirely inside what the program guidelines allow — generic search and social, Direct Protection Security ads, and an organic content engine, all driving to one consented lead form.</p>
+    <div class="guard-chips">
+      <span>Generic creative only</span>
+      <span>Lead-form consent</span>
+      <span>PV-approved before launch</span>
+      <span>No click-to-chat</span>
+    </div>
+
+    <div class="rail reveal">
+      <div class="rail-line"></div>
+      <div class="rail-block">
+        <div class="rail-time">08:00</div>
+        <div class="rail-dot"></div>
+        <h3>Morning</h3>
+        <p>Clear overnight leads, check pacing, scrub junk and brand search terms into negatives.</p>
+      </div>
+      <div class="rail-block">
+        <div class="rail-time">12:00</div>
+        <div class="rail-dot"></div>
+        <h3>Midday</h3>
+        <p>Answer new leads, shift budget to the morning's best performer, queue fresh creative.</p>
+      </div>
+      <div class="rail-block">
+        <div class="rail-time">17:00</div>
+        <div class="rail-dot"></div>
+        <h3>Evening</h3>
+        <p>Primetime push when homeowners are reachable, fast lead response, log the day.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- SETUP GATE -->
+<section class="section" id="gate">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <div class="eyebrow">Step 0 · one-time</div>
+      <h2>Before a single dollar runs</h2>
+      <p>These happen once. Paid spend stays paused until all six are done.</p>
+    </div>
+    <div class="gate reveal">
+      <ol>
+        <li><span><b>Landing page + lead form approved by PV Marketing.</b> Submit a PDF mockup or private URL. Confirm the privacy policy and opt-in checkbox sit next to the form.</span></li>
+        <li><span><b>Campaign assets approved by PV.</b> Keyword list, the PV negative-keyword list, and all ad copy submitted and approved before going live.</span></li>
+        <li><span><b>Direct Protection Security ad rules confirmed in writing</b> — brand use and allowed claims.</span></li>
+        <li><span><b>Tracking installed.</b> Conversion tracking on the lead form, call tracking on click-to-call, and UTM tags so every lead maps to an ad.</span></li>
+        <li><span><b>Geo-targeting set to serviceable areas only</b> — Inland Empire, and South Bay / Gilroy / Morgan Hill / Monterey. Never pay for clicks you cannot sell.</span></li>
+        <li><span><b>Lead routing live.</b> Every form submit instantly pings the rep so consented leads get called back fast.</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ALLOWED CHANNELS -->
+<section class="section" id="channels">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <div class="eyebrow">The foundation</div>
+      <h2>What paid advertising is allowed</h2>
+      <p>Every tactic in this plan comes from this matrix. If an ad names a carrier or shows a promo, it is out of bounds.</p>
+    </div>
+    <div class="matrix reveal">
+      <div class="mx-row head">
+        <div class="mx-cell">Channel</div>
+        <div class="mx-cell">Internet — Frontier &amp; EarthLink</div>
+        <div class="mx-cell">Security — Direct Protection</div>
+      </div>
+      <div class="mx-row">
+        <div class="mx-cell ch" data-l="Channel">Paid search</div>
+        <div class="mx-cell" data-l="Internet"><span class="tag t-ok">Allowed</span><span class="mx-note">Generic, non-branded · PV negative list · reviewed before launch</span></div>
+        <div class="mx-cell" data-l="Security"><span class="tag t-ok">Allowed</span><span class="mx-note">Generic / branded per DPS · truthful</span></div>
+      </div>
+      <div class="mx-row">
+        <div class="mx-cell ch" data-l="Channel">Paid social</div>
+        <div class="mx-cell" data-l="Internet"><span class="tag t-appr">Mixed</span><span class="mx-note">Frontier: generic only · EarthLink: branded OK with PV approval</span></div>
+        <div class="mx-cell" data-l="Security"><span class="tag t-ok">Allowed</span><span class="mx-note">Under DPS brand · truthful</span></div>
+      </div>
+      <div class="mx-row">
+        <div class="mx-cell ch" data-l="Channel">Destination</div>
+        <div class="mx-cell" data-l="Internet"><span class="tag t-ok">Lead form</span><span class="mx-note">Approved page · privacy + opt-in next to the form</span></div>
+        <div class="mx-cell" data-l="Security"><span class="tag t-ok">Lead form</span><span class="mx-note">Same lead-capture standard</span></div>
+      </div>
+      <div class="mx-row">
+        <div class="mx-cell ch" data-l="Channel">Brand-term bidding</div>
+        <div class="mx-cell" data-l="Internet"><span class="tag t-no">Prohibited</span><span class="mx-note">No Frontier / EarthLink / competitor terms</span></div>
+        <div class="mx-cell" data-l="Security"><span class="tag t-no">Prohibited</span><span class="mx-note">No ADT or competitor terms</span></div>
+      </div>
+      <div class="mx-row">
+        <div class="mx-cell ch" data-l="Channel">Click-to-chat capture</div>
+        <div class="mx-cell" data-l="Internet"><span class="tag t-no">Prohibited</span><span class="mx-note">WhatsApp / Messenger is not valid consent</span></div>
+        <div class="mx-cell" data-l="Security"><span class="tag t-no">Avoid</span><span class="mx-note">Route to call or form</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BUDGET ALLOCATOR -->
+<section class="section" id="budget">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <div class="eyebrow">Spend plan</div>
+      <h2>Daily budget allocator</h2>
+      <p>Pick a tier or set your own daily budget, split it across the allowed channels, and see the monthly spend and estimated leads. Hold a budget steady at least two weeks before judging it.</p>
+    </div>
+    <div class="alloc reveal">
+      <div class="alloc-card">
+        <span class="ctl-label">Preset tier</span>
+        <div class="tier-row">
+          <button class="tier-btn" data-budget="60" data-s="100" data-o="0" data-c="0">Starter</button>
+          <button class="tier-btn active" data-budget="150" data-s="50" data-o="30" data-c="20">Growth</button>
+          <button class="tier-btn" data-budget="400" data-s="45" data-o="35" data-c="20">Scale</button>
+        </div>
+        <div class="budget-input">
+          <label for="dailyBudget">Daily budget</label>
+          <div class="money-field"><span>$</span><input type="number" id="dailyBudget" value="150" min="0" step="5" aria-label="Daily budget in dollars"></div>
+          <span class="per">/ day</span>
+        </div>
+        <span class="ctl-label">Channel split</span>
+        <div class="split-row">
+          <label>Paid search <span class="dot dot-search"></span></label>
+          <input type="range" id="sSearch" min="0" max="100" value="50" aria-label="Paid search share">
+          <span class="split-pct" id="pSearch">50%</span>
+        </div>
+        <div class="split-row">
+          <label>Paid social <span class="dot dot-social"></span></label>
+          <input type="range" id="sSocial" min="0" max="100" value="30" aria-label="Paid social share">
+          <span class="split-pct" id="pSocial">30%</span>
+        </div>
+        <div class="split-row">
+          <label>Security <span class="dot dot-sec"></span></label>
+          <input type="range" id="sSec" min="0" max="100" value="20" aria-label="Security share">
+          <span class="split-pct" id="pSec">20%</span>
+        </div>
+        <div class="cpl-block">
+          <span class="ctl-label">Target cost per lead</span>
+          <div class="cpl-row">
+            <div class="cpl-field">Search $<input type="number" id="cplSearch" value="30" min="1" aria-label="Search cost per lead"></div>
+            <div class="cpl-field">Social $<input type="number" id="cplSocial" value="35" min="1" aria-label="Social cost per lead"></div>
+            <div class="cpl-field">Security $<input type="number" id="cplSec" value="90" min="1" aria-label="Security cost per lead"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="alloc-card">
+        <div class="bar" id="splitBar">
+          <div class="seg seg-search" style="width:50%"></div>
+          <div class="seg seg-social" style="width:30%"></div>
+          <div class="seg seg-sec" style="width:20%"></div>
+        </div>
+        <table class="out-table">
+          <thead><tr><th>Channel</th><th>Per day</th><th>Per month</th><th>Leads / mo</th></tr></thead>
+          <tbody>
+            <tr><td><span class="dot dot-search"></span>Paid search</td><td id="dSearch">$75</td><td id="mSearch">$2,280</td><td id="lSearch">~76</td></tr>
+            <tr><td><span class="dot dot-social"></span>Paid social</td><td id="dSocial">$45</td><td id="mSocial">$1,368</td><td id="lSocial">~39</td></tr>
+            <tr><td><span class="dot dot-sec"></span>Security</td><td id="dSec">$30</td><td id="mSec">$912</td><td id="lSec">~10</td></tr>
+          </tbody>
+        </table>
+        <div class="totals">
+          <span class="tlabel">Monthly spend</span>
+          <b id="totalMo">$4,560</b>
+        </div>
+        <div class="totals" style="border-top:1px solid var(--line);padding-top:12px;margin-top:12px">
+          <span class="tlabel">Estimated leads / month</span>
+          <b class="leadnum" id="totalLeads">~125</b>
+        </div>
+        <p class="mini-note">Estimates only — calibrate cost per lead to your own results after week one. Monthly figures use 30.4 days.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DAILY ROUTINE -->
+<section class="section" id="daily">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <div class="eyebrow">The daily routine</div>
+      <h2>What you do every day</h2>
+      <p>Three short blocks, plus the one rule that moves the needle more than anything else.</p>
+    </div>
+    <div class="day-grid">
+      <div class="day-card reveal">
+        <div class="dc-time">08:00 — 09:00</div>
+        <h3>☀️ Morning</h3>
+        <ul>
+          <li>Call every consented lead from overnight first — speed wins.</li>
+          <li>Check pacing: did yesterday land on budget? Is today pacing right?</li>
+          <li>Scan search terms; add junk and brand terms to negatives.</li>
+          <li>Pause any ad or keyword that spent yesterday with zero leads.</li>
+        </ul>
+      </div>
+      <div class="day-card reveal">
+        <div class="dc-time">12:00 — 13:00</div>
+        <h3>🕛 Midday</h3>
+        <ul>
+          <li>Respond to every new lead since morning.</li>
+          <li>Shift a little budget toward the morning's best performer.</li>
+          <li>Check social ad frequency; queue fresh creative if it is climbing.</li>
+        </ul>
+      </div>
+      <div class="day-card reveal">
+        <div class="dc-time">17:00 — 19:00</div>
+        <h3>🌆 Evening · primetime</h3>
+        <ul>
+          <li>Highest-intent window — make sure a winner is not budget-capped.</li>
+          <li>Fastest payoff on lead response; people are home and reachable.</li>
+          <li>Log spend, leads, and cost per lead. Note tomorrow's one fix.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="sla reveal">
+      <div class="sla-num">5<span>min</span></div>
+      <div class="sla-txt">
+        <h3>Call every paid lead within 5 minutes</h3>
+        <p>The single biggest lever you have. The lead-form opt-in is your consent to call or text, which keeps the call-back compliant — and Frontier and EarthLink phone sales are inbound and consent-driven only, so paid leads must come through the consented form or a click-to-call.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WEEKLY -->
+<section class="section" id="week">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <div class="eyebrow">The week</div>
+      <h2>Weekly cadence</h2>
+      <p>The daily routine runs every day. This is what to emphasize on top of it.</p>
+    </div>
+    <div class="week reveal">
+      <div class="wday peak"><div class="wd">Mon</div><p>Review last week, reset budgets, plan creative tests. Strong lead day.</p></div>
+      <div class="wday"><div class="wd">Tue</div><p>Optimize and scale winners (+10–20%). Core production.</p></div>
+      <div class="wday"><div class="wd">Wed</div><p>Scale winners, cut losers. Core production.</p></div>
+      <div class="wday"><div class="wd">Thu</div><p>Scale winners, cut losers. Core production.</p></div>
+      <div class="wday"><div class="wd">Fri</div><p>Refresh creative — load next week's ad variations.</p></div>
+      <div class="wday peak"><div class="wd">Sat</div><p>Lead-gen heavy — people are home. Keep budget up; call leads back.</p></div>
+      <div class="wday"><div class="wd">Sun</div><p>Lighter spend; evening uptick. Prep Monday.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PLAYBOOK / AD ANGLES -->
+<section class="section" id="playbook">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <div class="eyebrow">Compliant creative</div>
+      <h2>What to actually run</h2>
+      <p>Generic copy and keywords only — never a carrier name, logo, price, or promo. Every ad drives to the lead form or a click-to-call.</p>
+    </div>
+    <div class="pb-grid">
+      <div class="pb-card pb-search reveal">
+        <h3><span class="pb-icn">🔍</span> Paid search · internet</h3>
+        <div class="pb-rule">Generic keywords, generic copy</div>
+        <span class="lbl">Example keywords</span>
+        <div>
+          <span class="kw">fiber internet [city]</span><span class="kw">home internet near me</span><span class="kw">fiber availability my address</span><span class="kw">fast home internet</span>
+        </div>
+        <span class="lbl">Example headlines</span>
+        <div class="ad-ex">Fiber internet in [City] — check your address</div>
+        <div class="ad-ex">Fast home internet — see what's available</div>
+      </div>
+      <div class="pb-card pb-social reveal">
+        <h3><span class="pb-icn">📱</span> Paid social · internet</h3>
+        <div class="pb-rule">Generic creative, your brand only</div>
+        <span class="lbl">Example ad</span>
+        <div class="ad-ex">See what internet speeds are available at your address — free 60-second check.</div>
+        <span class="lbl">Rule of thumb</span>
+        <div class="ad-ex">No carrier logos, pricing, or offers in generic ads. EarthLink-branded social only if PV approves it first.</div>
+      </div>
+      <div class="pb-card pb-sec reveal">
+        <h3><span class="pb-icn">🛡️</span> Security · Direct Protection</h3>
+        <div class="pb-rule">DPS brand, truthful claims</div>
+        <span class="lbl">Example keywords</span>
+        <div><span class="kw">home security [city]</span><span class="kw">alarm system quote</span><span class="kw">home alarm monitoring</span></div>
+        <span class="lbl">Example ad</span>
+        <div class="ad-ex">Protect your home — get a fast alarm-system quote.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORGANIC -->
+<section class="section" id="organic">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <div class="eyebrow">No ad spend</div>
+      <h2>The organic playbook</h2>
+      <p>Earn attention, trust, and leads without paying for them — built on how the best operators and companies actually grew. Same compliance rules as paid: generic on social.</p>
+    </div>
+
+    <div class="strat-grid">
+      <div class="strat-card reveal">
+        <div class="sc-name">Ryan Magin <span class="sc-dom">Short-form / TikTok</span></div>
+        <div class="sc-principle">Cast a wide net with broad content, then repurpose relentlessly. Win the first three seconds with a hook, and edit native to each platform — what works on TikTok isn't what works elsewhere.</div>
+        <div class="sc-apply"><b>Run it:</b> film one shoot at the door, cut it into 5-10 clips. Open every video with a hook — "most homes on this street can get fiber and don't know it." Post daily; let volume surface the winners.</div>
+      </div>
+      <div class="strat-card reveal">
+        <div class="sc-name">Gary Vaynerchuk <span class="sc-dom">Attention / brand</span></div>
+        <div class="sc-principle">His "jab, jab, jab, right hook" rule: give value far more often than you ask, so the ask lands. "Day trading attention" means making platform-native content in today's underpriced channels — and you're only as good as your last post.</div>
+        <div class="sc-apply"><b>Run it:</b> document, don't just create. Give value 80% of the time (speed tips, security tips, neighborhood updates) so the 20% "check your address" ask actually converts.</div>
+      </div>
+      <div class="strat-card reveal">
+        <div class="sc-name">Top agencies' pages <span class="sc-dom">Brand / proof</span></div>
+        <div class="sc-principle">The best agencies use their own social to lead with the work as proof — results, real campaigns, testimonials — broadcast a strong point of view, and show their culture and people, consistently and in a clear voice.</div>
+        <div class="sc-apply"><b>Run it:</b> post real installs and wins, customer testimonials, and behind-the-scenes team culture. Make Complete Home Today a recognizable local brand, not a faceless knock.</div>
+      </div>
+      <div class="strat-card reveal">
+        <div class="sc-name">Steve Jobs <span class="sc-dom">Story / simplicity</span></div>
+        <div class="sc-quote">"Simplicity is the ultimate sophistication." — Steve Jobs</div>
+        <div class="sc-principle">Sell dreams, not products — lead with the outcome people want, not the spec sheet. Start with the customer experience and work back to the offer.</div>
+        <div class="sc-apply"><b>Run it:</b> don't sell "symmetrical fiber" — sell the connected, frustration-free home and peace of mind. One simple idea per post. Experience first, tech second.</div>
+      </div>
+      <div class="strat-card reveal">
+        <div class="sc-name">Elon Musk <span class="sc-dom">Product / word of mouth</span></div>
+        <div class="sc-quote">"Awesome products grow with word of mouth." — Elon Musk</div>
+        <div class="sc-principle">Reason from first principles — question how door-to-door "has to" be done — and make the experience so good it spreads itself, with almost no ad spend.</div>
+        <div class="sc-apply"><b>Run it:</b> make the doorstep and the install so good that customers refer neighbors. Build a referral ask into every happy close — referrals are free, compounding reach.</div>
+      </div>
+      <div class="strat-card reveal">
+        <div class="sc-name">Palantir <span class="sc-dom">Embed / mission</span></div>
+        <div class="sc-principle">Palantir embedded "forward-deployed" people directly with customers to solve real problems and earn trust — wrapped in a clear mission, and the long game over quick wins.</div>
+        <div class="sc-apply"><b>Run it:</b> your reps are forward-deployed — in the neighborhood, solving a real problem face-to-face. Lead with mission (connecting and protecting homes) and prove value on the spot with the free availability check.</div>
+      </div>
+      <div class="strat-card reveal">
+        <div class="sc-name">Oracle <span class="sc-dom">Sales culture / objections</span></div>
+        <div class="sc-principle">Oracle built a relentless, well-trained, uncapped-commission sales culture — and Larry Ellison had reps bring him every objection so the team could answer them. Bold, confident positioning, with a free trial as the wedge.</div>
+        <div class="sc-apply"><b>Run it:</b> collect every door objection and turn it into content — answer the top ten in ten short videos. Train relentlessly, pay uncapped, and use the free quote as the no-risk wedge.</div>
+      </div>
+    </div>
+
+    <div class="s-head reveal" style="margin-top:54px">
+      <div class="eyebrow">The system</div>
+      <h2>Your content engine</h2>
+      <p>Five content pillars, a give-before-you-ask ratio, and one rule: volume beats polish. Film in batches, repurpose everything.</p>
+    </div>
+    <div class="pillars reveal">
+      <div class="pillar"><div class="pi-n">01</div><h4>Educate</h4><p>Fast tips on internet speed, Wi-Fi, and home security people actually want.</p></div>
+      <div class="pillar"><div class="pi-n">02</div><h4>Document</h4><p>Real day-in-the-life at the door — the journey, not a polished ad.</p></div>
+      <div class="pillar"><div class="pi-n">03</div><h4>Proof</h4><p>Wins, real installs, and customer testimonials. Show it works.</p></div>
+      <div class="pillar"><div class="pi-n">04</div><h4>Recruit</h4><p>The opportunity and team culture — generic income framing, compliant.</p></div>
+      <div class="pillar"><div class="pi-n">05</div><h4>Local</h4><p>Neighborhood and community content tied to your territories.</p></div>
+    </div>
+    <div style="margin-top:18px">
+      <div class="ratio reveal"><div class="give">Give value 80%</div><div class="ask">Ask 20%</div></div>
+      <p class="mini-note" style="font-style:normal">Most posts give value; roughly one in five makes the "check your address" or "get a quote" ask. One door shoot should become 5-10 short clips across TikTok, Reels, Shorts, and Facebook.</p>
+    </div>
+
+    <div class="s-head reveal" style="margin-top:54px">
+      <div class="eyebrow">The week</div>
+      <h2>Filming &amp; posting rhythm</h2>
+      <p>Post daily. Batch-film once, drip it out. Reply to every comment and DM.</p>
+    </div>
+    <div class="week reveal">
+      <div class="wday peak"><div class="wd">Mon</div><p>Batch-film the week's clips. Plan hooks and topics.</p></div>
+      <div class="wday"><div class="wd">Tue</div><p>Educate — a quick speed or security tip.</p></div>
+      <div class="wday"><div class="wd">Wed</div><p>Document — a day-in-the-life at the door.</p></div>
+      <div class="wday"><div class="wd">Thu</div><p>Proof — a win, install, or testimonial.</p></div>
+      <div class="wday"><div class="wd">Fri</div><p>Recruit — the opportunity and culture.</p></div>
+      <div class="wday peak"><div class="wd">Sat</div><p>Local + engage. Reply to every comment and DM.</p></div>
+      <div class="wday"><div class="wd">Sun</div><p>Repurpose the week's top performer. Plan Monday.</p></div>
+    </div>
+
+    <div class="prohibit reveal" style="margin-top:40px">
+      <h3>⛔ Organic still follows the rules</h3>
+      <ul>
+        <li>Frontier content on social must be generic — no carrier logos, pricing, offers, or the "Frontier Authorized Sales Agent" phrase</li>
+        <li>EarthLink-branded social is allowed only with PerfectVision pre-approval</li>
+        <li>Security content runs under the Direct Protection Security brand with truthful claims</li>
+        <li>Route every DM to a call or your lead form — never collect personal info through chat</li>
+        <li>Any lead your content generates follows the same consent rules as paid</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PRINCIPLES & CANON -->
+<section class="section" id="principles">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <div class="eyebrow">Foundations</div>
+      <h2>Principles &amp; canon</h2>
+      <p>The ideas that recur across Alan Weiss, the marketing canon, and how the biggest companies actually won — the durable rules underneath the daily tactics.</p>
+    </div>
+
+    <div class="sub-label reveal">Alan Weiss — the consulting marketing playbook</div>
+    <div class="strat-grid reveal">
+      <div class="strat-card">
+        <div class="sc-name">Value-based fees <span class="sc-dom">Pricing</span></div>
+        <div class="sc-principle">Price the outcome you create, never your time or hours. Raise the perceived value instead of lowering the fee, and charge for the client's improved future, not your deliverables.</div>
+        <div class="sc-apply"><b>Run it:</b> sell the result — a connected, protected home — not the line items.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Market gravity <span class="sc-dom">Attraction</span></div>
+        <div class="sc-principle">Attract buyers to you with a steady stream of content and thought leadership instead of chasing them. Become the obvious object of interest in your area.</div>
+        <div class="sc-apply"><b>Run it:</b> your organic content engine is market gravity — keep it running daily.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">The accelerant curve <span class="sc-dom">Offers</span></div>
+        <div class="sc-principle">Offer easy, low-barrier entry points that pull people toward higher-value, higher-trust relationships, ending in unique offers only you have.</div>
+        <div class="sc-apply"><b>Run it:</b> free availability check first, then service, then referrals and add-ons.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">The economic buyer <span class="sc-dom">Access</span></div>
+        <div class="sc-principle">Reach the one person who can authorize the decision without anyone else's approval, and agree up front on the objective and the value.</div>
+        <div class="sc-apply"><b>Run it:</b> at the door, talk to the decision-maker, not just whoever answers.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Referrals first <span class="sc-dom">Growth</span></div>
+        <div class="sc-principle">A peer endorsing a peer is the highest-quality marketing there is. Build a body of work and let satisfied customers spread it for you.</div>
+        <div class="sc-apply"><b>Run it:</b> ask every happy customer for two neighbors who'd want the same.</div>
+      </div>
+    </div>
+
+    <div class="sub-label reveal">The marketing canon — who they teach in the textbooks</div>
+    <div class="canon-grid reveal">
+      <div class="canon-item"><div class="cr">Father of modern marketing</div><div class="cn">Philip Kotler</div><p>The 4 Ps and STP (segment, target, position). Systematic, research-led, customer-centric.</p></div>
+      <div class="canon-item"><div class="cr">Father of advertising</div><div class="cn">David Ogilvy</div><p>Research-driven brand-building and the big idea. <span class="cq">"The best ideas come as jokes."</span></p></div>
+      <div class="canon-item"><div class="cr">Scientific advertising</div><div class="cn">Claude Hopkins</div><p>Test and measure everything; treat every ad as a salesman in print.</p></div>
+      <div class="canon-item"><div class="cr">Creative revolution</div><div class="cn">Bill Bernbach</div><p>Bold, human creative that sells. <span class="cq">"The purpose of advertising is to sell."</span></p></div>
+      <div class="canon-item"><div class="cr">Marketing myopia</div><div class="cn">Theodore Levitt</div><p>Sell what the customer actually needs, not what you happen to make.</p></div>
+      <div class="canon-item"><div class="cr">Permission marketing</div><div class="cn">Seth Godin</div><p>Earn attention and trust instead of interrupting; be remarkable, not just visible.</p></div>
+      <div class="canon-item"><div class="cr">Guerrilla marketing</div><div class="cn">Jay Conrad Levinson</div><p>Low-cost creativity that lets a small operator outflank bigger budgets.</p></div>
+      <div class="canon-item"><div class="cr">Positioning</div><div class="cn">Ries &amp; Trout</div><p>Own one distinct, simple place in the customer's mind — and defend it.</p></div>
+    </div>
+    <p class="mini-note" style="font-style:normal">Gary Vaynerchuk and Steve Jobs round out the modern canon — both covered in the organic playbook above.</p>
+
+    <div class="sub-label reveal">How businesses grow — the frameworks every B-school teaches</div>
+    <div class="pillars reveal">
+      <div class="pillar"><div class="pi-n">01</div><h4>Penetration</h4><p>More to your current market. Cheapest, lowest-risk — do this first.</p></div>
+      <div class="pillar"><div class="pi-n">02</div><h4>Market dev</h4><p>Same offer, taken to new segments or territories.</p></div>
+      <div class="pillar"><div class="pi-n">03</div><h4>Product dev</h4><p>New offers to the customers you already have.</p></div>
+      <div class="pillar"><div class="pi-n">04</div><h4>Diversify</h4><p>New offers to new markets — riskiest, usually by acquisition.</p></div>
+      <div class="pillar"><div class="pi-n">+</div><h4>Moat</h4><p>Win on real cost advantage or real differentiation (Porter).</p></div>
+    </div>
+
+    <div class="sub-label reveal">What the giants did to win</div>
+    <div class="strat-grid reveal">
+      <div class="strat-card">
+        <div class="sc-name">BlackRock <span class="sc-dom">Platform + scale</span></div>
+        <div class="sc-principle">Put risk management at the core, built a proprietary platform (Aladdin) that competitors now depend on, and scaled through bold acquisitions — buying the iShares ETF business in the 2009 crisis made it the largest asset manager in the world.</div>
+        <div class="sc-apply"><b>Lesson:</b> own something hard to copy; move decisively when others can't.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Blackstone <span class="sc-dom">Reputation + focus</span></div>
+        <div class="sc-principle">Leveraged reputation and relationships to raise a record first fund, then scaled — while deliberately expanding only into areas where it had a real edge, protecting its reputation.</div>
+        <div class="sc-apply"><b>Lesson:</b> trust opens doors; stay in your lane of advantage.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Berkshire Hathaway <span class="sc-dom">Moats + patience</span></div>
+        <div class="sc-quote">"A moat that must be continuously rebuilt will eventually be no moat at all." — Warren Buffett</div>
+        <div class="sc-principle">Buy and build durable economic moats — brand and pricing power, switching costs, network effects, cost advantages from scale — allocate capital patiently, and think in decades.</div>
+        <div class="sc-apply"><b>Lesson:</b> a real, durable advantage compounds; chase durability, not hype.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Enduring greatness <span class="sc-dom">Fortune 500 research</span></div>
+        <div class="sc-principle">Across the companies that lasted: humble-but-driven leaders, the right people first, brutal honesty about reality, and focus on the one thing you can be best at — run by a culture of discipline. Fortune-scale staples: clear vision, constant innovation, and keeping top talent.</div>
+        <div class="sc-apply"><b>Lesson:</b> endurance depends more on what you do to yourself than on the market.</div>
+      </div>
+    </div>
+    <p class="mini-note" style="font-style:normal">Oracle's objection-driven sales culture and Palantir's embedded, mission-led approach are detailed in the organic playbook above.</p>
+
+    <div class="sub-label reveal">The common denominators — what shows up in every source</div>
+    <div class="denom-list reveal">
+      <div class="d"><b>Be the obvious choice, not a commodity.</b> <span>A moat or sharp position — Buffett, Porter, Ries &amp; Trout, Weiss.</span></div>
+      <div class="d"><b>Obsess over the customer; sell the outcome.</b> <span>Benefit, not features — Levitt, Kotler, Jobs.</span></div>
+      <div class="d"><b>Attract with value first.</b> <span>Give before you ask; word of mouth beats interruption — Weiss, Godin, Musk.</span></div>
+      <div class="d"><b>Retention compounds.</b> <span>Keep and expand customers; referrals are the best growth — Ansoff, Weiss.</span></div>
+      <div class="d"><b>Out-discipline everyone over the long term.</b> <span>Right people, culture, consistency, patience — Collins, Berkshire, Blackstone.</span></div>
+      <div class="d"><b>Scale and reinvest what works.</b> <span>Double down on winners; build leverage — BlackRock, Blackstone.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section class="section" id="videos">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <div class="eyebrow">Watch and learn</div>
+      <h2>Video library</h2>
+      <p>Straight from the people behind the principles above — each one maps to a strategy already in this plan.</p>
+    </div>
+    <div class="vid-grid reveal">
+      <div class="vid-card">
+        <div class="vid-frame"><iframe src="https://www.youtube-nocookie.com/embed/Np6OQi8WGqs" title="Steve Jobs - Marketing is about values (1997)" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+        <div class="vid-meta"><div class="vm-name">Steve Jobs <span class="vm-tag">Brand / values</span></div><p>His 1997 talk: marketing is about values, not features and specs.</p><a class="vm-link" href="https://www.youtube.com/watch?v=Np6OQi8WGqs" target="_blank" rel="noopener">Watch on YouTube ↗</a></div>
+      </div>
+      <div class="vid-card">
+        <div class="vid-frame"><iframe src="https://www.youtube-nocookie.com/embed/H_6yFerLNmU" title="Gary Vaynerchuk marketing keynote" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+        <div class="vid-meta"><div class="vm-name">Gary Vaynerchuk <span class="vm-tag">Attention / social</span></div><p>A full marketing keynote on earning attention and giving value first.</p><a class="vm-link" href="https://www.youtube.com/watch?v=H_6yFerLNmU" target="_blank" rel="noopener">Watch on YouTube ↗</a></div>
+      </div>
+      <div class="vid-card">
+        <div class="vid-frame"><iframe src="https://www.youtube-nocookie.com/embed/PQc__RPZ0Cw" title="Ryan Magin short-form content" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+        <div class="vid-meta"><div class="vm-name">Ryan Magin <span class="vm-tag">Short-form video</span></div><p>How he built a short-form content agency, and what makes clips land.</p><a class="vm-link" href="https://www.youtube.com/watch?v=PQc__RPZ0Cw" target="_blank" rel="noopener">Watch on YouTube ↗</a></div>
+      </div>
+      <div class="vid-card">
+        <div class="vid-frame"><iframe src="https://www.youtube-nocookie.com/embed/J2c65bQTyzM" title="Alan Weiss on value-based fees" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+        <div class="vid-meta"><div class="vm-name">Alan Weiss <span class="vm-tag">Pricing / value</span></div><p>The idea behind value-based fees: charge for outcomes, not hours.</p><a class="vm-link" href="https://www.youtube.com/watch?v=J2c65bQTyzM" target="_blank" rel="noopener">Watch on YouTube ↗</a></div>
+      </div>
+      <div class="vid-card">
+        <div class="vid-frame"><iframe src="https://www.youtube-nocookie.com/embed/NV3sBlRgzTI" title="Elon Musk on first-principles thinking" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+        <div class="vid-meta"><div class="vm-name">Elon Musk <span class="vm-tag">First principles</span></div><p>Reasoning from first principles instead of by analogy when building.</p><a class="vm-link" href="https://www.youtube.com/watch?v=NV3sBlRgzTI" target="_blank" rel="noopener">Watch on YouTube ↗</a></div>
+      </div>
+      <div class="vid-card">
+        <div class="vid-frame"><iframe src="https://www.youtube-nocookie.com/embed/xBIVlM435Zg" title="Seth Godin TED - How to get your ideas to spread" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+        <div class="vid-meta"><div class="vm-name">Seth Godin <span class="vm-tag">Be remarkable</span></div><p>The classic TED talk on why remarkable ideas spread and ordinary ones do not.</p><a class="vm-link" href="https://www.youtube.com/watch?v=xBIVlM435Zg" target="_blank" rel="noopener">Watch on YouTube ↗</a></div>
+      </div>
+    </div>
+    <p class="mini-note" style="font-style:normal">Videos are embedded from their owners' official YouTube channels. If a creator ever removes one, that tile may go blank and can be swapped.</p>
+  </div>
+</section>
+
+<!-- COMPLIANCE -->
+<section class="section" id="compliance">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <div class="eyebrow">Guardrails</div>
+      <h2>Daily compliance check</h2>
+      <p>A ten-second gut check before you spend. Tap each item — your progress saves on this device.</p>
+    </div>
+    <div class="comp-grid">
+      <div class="checklist reveal" id="checklist">
+        <div class="cl-top">
+          <h3>Before you spend</h3>
+          <button class="cl-reset" id="clReset">Reset</button>
+        </div>
+        <div class="cl-prog" id="clProg">0 of 8 checked</div>
+        <div class="cl-bar"><i id="clFill"></i></div>
+        <div id="clItems"></div>
+      </div>
+      <div>
+        <div class="prohibit reveal">
+          <h3>⛔ Never do these</h3>
+          <ul>
+            <li>Bid on carrier or competitor brand terms</li>
+            <li>Put logos, pricing, or offers in generic ads</li>
+            <li>Use the "Frontier Authorized Sales Agent" phrase on social</li>
+            <li>Capture leads through WhatsApp or Messenger chat</li>
+            <li>Collect personal info via text or chat</li>
+            <li>Cold-call outbound lists for Frontier or EarthLink</li>
+            <li>Launch a campaign before PV reviews it</li>
+            <li>Register a carrier-branded domain</li>
+          </ul>
+          <p class="conseq">Penalties: PerfectVision fines run <b>up to $500</b> per violation (including via BBB and FCC complaints). Telemarketing-law penalties run <b>up to ~$51,744</b> per call, plus <b>$500–$1,500</b> per call in private suits.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KPIS -->
+<section class="section" id="kpis">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <div class="eyebrow">Measure it</div>
+      <h2>Daily numbers to log</h2>
+      <p>Calibrate targets to your own data after the first week.</p>
+    </div>
+    <div class="kpi-grid reveal">
+      <div class="kpi"><div class="kt">Spend vs. budget</div><div class="kv">Within ±10%</div></div>
+      <div class="kpi"><div class="kt">Cost per lead</div><div class="kv">Internet $15–50 · security $50–150+</div></div>
+      <div class="kpi"><div class="kt">Lead response time</div><div class="kv">&lt; 5 minutes, every lead</div></div>
+      <div class="kpi"><div class="kt">Contact rate</div><div class="kv">% of leads reached</div></div>
+      <div class="kpi"><div class="kt">Leads</div><div class="kv">Up week over week</div></div>
+      <div class="kpi"><div class="kt">Lead → appointment</div><div class="kv">The number that proves spend</div></div>
+      <div class="kpi"><div class="kt">Negatives added</div><div class="kv">A few daily, early on</div></div>
+      <div class="kpi"><div class="kt">New campaigns</div><div class="kv">PV-reviewed before live</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-mark">Complete Home Today · Marketing Plan</div>
+    <p class="foot-discl">Internal operating playbook — not for customer distribution. Practical guidance, not legal or financial advice. Budgets and cost-per-lead figures are starting estimates to calibrate against real results. Frontier and EarthLink rules reflect the PerfectVision marketing guidelines (generic paid media, negative-keyword list, PV pre-approval); confirm Direct Protection Security specifics with them. Any phone follow-up must comply with TCPA and Do-Not-Call rules.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  // ---- Budget allocator ----
+  var $ = function(id){ return document.getElementById(id); };
+  var budget = $("dailyBudget"), sS = $("sSearch"), sO = $("sSocial"), sC = $("sSec");
+  var cS = $("cplSearch"), cO = $("cplSocial"), cC = $("cplSec");
+
+  function money(n){ return "$" + Math.round(n).toLocaleString("en-US"); }
+
+  function calc(){
+    var b = Math.max(0, parseFloat(budget.value) || 0);
+    var a = Math.max(0, parseFloat(sS.value) || 0);
+    var o = Math.max(0, parseFloat(sO.value) || 0);
+    var c = Math.max(0, parseFloat(sC.value) || 0);
+    var sum = a + o + c;
+    var fa, fo, fc;
+    if(sum === 0){ fa = fo = fc = 0; } else { fa = a/sum; fo = o/sum; fc = c/sum; }
+
+    $("pSearch").textContent = Math.round(fa*100) + "%";
+    $("pSocial").textContent = Math.round(fo*100) + "%";
+    $("pSec").textContent = Math.round(fc*100) + "%";
+
+    var bar = $("splitBar").children;
+    bar[0].style.width = (fa*100) + "%";
+    bar[1].style.width = (fo*100) + "%";
+    bar[2].style.width = (fc*100) + "%";
+
+    var dS = b*fa, dO = b*fo, dC = b*fc;
+    var mS = dS*30.4, mO = dO*30.4, mC = dC*30.4;
+    $("dSearch").textContent = money(dS); $("mSearch").textContent = money(mS);
+    $("dSocial").textContent = money(dO); $("mSocial").textContent = money(mO);
+    $("dSec").textContent = money(dC); $("mSec").textContent = money(mC);
+
+    var cpS = Math.max(1, parseFloat(cS.value)||1), cpO = Math.max(1, parseFloat(cO.value)||1), cpC = Math.max(1, parseFloat(cC.value)||1);
+    var leS = mS/cpS, leO = mO/cpO, leC = mC/cpC;
+    $("lSearch").textContent = "~" + Math.round(leS);
+    $("lSocial").textContent = "~" + Math.round(leO);
+    $("lSec").textContent = "~" + Math.round(leC);
+
+    $("totalMo").textContent = money(mS+mO+mC);
+    $("totalLeads").textContent = "~" + Math.round(leS+leO+leC);
+  }
+
+  [budget, sS, sO, sC, cS, cO, cC].forEach(function(el){
+    el.addEventListener("input", calc);
+  });
+
+  // tier presets
+  document.querySelectorAll(".tier-btn").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      document.querySelectorAll(".tier-btn").forEach(function(b){ b.classList.remove("active"); });
+      btn.classList.add("active");
+      budget.value = btn.getAttribute("data-budget");
+      sS.value = btn.getAttribute("data-s");
+      sO.value = btn.getAttribute("data-o");
+      sC.value = btn.getAttribute("data-c");
+      calc();
+    });
+  });
+  calc();
+
+  // ---- Checklist ----
+  var items = [
+    "No carrier or brand terms in any keyword or ad (negative list active)",
+    "Generic ads contain no logos, pricing, or offers",
+    "All ads point to the PV-approved landing page and lead form",
+    "Lead form still shows the privacy policy and opt-in checkbox",
+    "No click-to-chat lead capture running anywhere",
+    "Geo-targeting limited to serviceable territories",
+    "Leads called back only via consent or inbound — no cold dialing",
+    "Every new campaign was PV-reviewed before going live"
+  ];
+  var KEY = "cht_paid_checklist_v1";
+  var state = [];
+  try { var saved = localStorage.getItem(KEY); if(saved){ state = JSON.parse(saved) || []; } } catch(e){ state = []; }
+  if(!Array.isArray(state) || state.length !== items.length){ state = items.map(function(){ return false; }); }
+
+  var wrap = $("clItems");
+  var check = '<svg viewBox="0 0 24 24" fill="none" stroke="#04201d" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+
+  function persist(){ try { localStorage.setItem(KEY, JSON.stringify(state)); } catch(e){} }
+
+  function progress(){
+    var done = state.filter(Boolean).length;
+    $("clProg").textContent = done + " of " + items.length + " checked";
+    $("clFill").style.width = (done/items.length*100) + "%";
+  }
+
+  function render(){
+    wrap.innerHTML = "";
+    items.forEach(function(txt, i){
+      var row = document.createElement("div");
+      row.className = "cl-item" + (state[i] ? " done" : "");
+      row.setAttribute("role","button");
+      row.setAttribute("tabindex","0");
+      row.innerHTML = '<span class="cl-box">' + check + '</span><span>' + txt + '</span>';
+      function toggle(){ state[i] = !state[i]; row.classList.toggle("done", state[i]); persist(); progress(); }
+      row.addEventListener("click", toggle);
+      row.addEventListener("keydown", function(ev){ if(ev.key === "Enter" || ev.key === " "){ ev.preventDefault(); toggle(); } });
+      wrap.appendChild(row);
+    });
+    progress();
+  }
+  render();
+
+  $("clReset").addEventListener("click", function(){
+    state = items.map(function(){ return false; });
+    persist(); render();
+  });
+
+  // ---- Nav active state + reveal ----
+  var sections = Array.prototype.slice.call(document.querySelectorAll("section[id], header[id]"));
+  var navlinks = Array.prototype.slice.call(document.querySelectorAll(".nav-links a"));
+  function onScroll(){
+    var pos = window.scrollY + 120;
+    var cur = sections[0];
+    sections.forEach(function(s){ if(s.offsetTop <= pos){ cur = s; } });
+    navlinks.forEach(function(a){ a.classList.toggle("on", a.getAttribute("href") === "#" + cur.id); });
+  }
+  window.addEventListener("scroll", onScroll, {passive:true});
+  onScroll();
+
+  // ---- Collapsible sections (every section minimizes / unminimizes) ----
+  document.querySelectorAll("section.section").forEach(function(sec){
+    var w = sec.querySelector(".wrap");
+    if(!w) return;
+    var head = w.querySelector(".s-head");
+    if(!head) return;
+    var body = document.createElement("div");
+    body.className = "sec-body";
+    var node = head.nextSibling;
+    while(node){ var nx = node.nextSibling; body.appendChild(node); node = nx; }
+    w.appendChild(body);
+    head.classList.add("sec-toggle");
+    head.setAttribute("role", "button");
+    head.setAttribute("tabindex", "0");
+    head.setAttribute("aria-expanded", "true");
+    var chev = document.createElement("span");
+    chev.className = "sec-chev";
+    chev.setAttribute("aria-hidden", "true");
+    head.appendChild(chev);
+    function expand(){
+      sec.classList.remove("collapsed");
+      head.setAttribute("aria-expanded", "true");
+      body.style.maxHeight = body.scrollHeight + "px";
+      window.setTimeout(function(){ if(!sec.classList.contains("collapsed")){ body.style.maxHeight = "none"; } }, 340);
+    }
+    function collapse(){
+      body.style.maxHeight = body.scrollHeight + "px";
+      void body.offsetHeight;
+      sec.classList.add("collapsed");
+      head.setAttribute("aria-expanded", "false");
+      body.style.maxHeight = "0px";
+    }
+    function toggle(){ if(sec.classList.contains("collapsed")){ expand(); } else { collapse(); } }
+    head.addEventListener("click", toggle);
+    head.addEventListener("keydown", function(e){
+      if(e.key === "Enter" || e.key === " " || e.keyCode === 13 || e.keyCode === 32){ e.preventDefault(); toggle(); }
+    });
+  });
+
+  if("IntersectionObserver" in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); } });
+    }, {threshold:.12});
+    document.querySelectorAll(".reveal").forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll(".reveal").forEach(function(el){ el.classList.add("in"); });
+  }
+})();
+</script>
+</body>
+</html>
