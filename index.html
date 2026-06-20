@@ -276,6 +276,51 @@ footer .wrap{display:flex;flex-direction:column;gap:10px}
 .vid-meta p{font-size:12.5px;color:var(--muted);line-height:1.45;margin-top:5px}
 .vm-link{display:inline-block;margin-top:10px;font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.04em;color:var(--gold-br);text-decoration:none;border-bottom:1px solid transparent}
 .vm-link:hover{border-bottom-color:var(--gold-br)}
+/* launch kit: calculator */
+.calc-wrap{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}
+.calc-row{margin-bottom:17px}
+.calc-row .cl{display:flex;justify-content:space-between;align-items:baseline;font-size:13px;font-weight:600;margin-bottom:8px}
+.calc-row .cl .cv{font-family:var(--mono);color:var(--gold-br);font-weight:700;font-size:14px}
+.calc-row input[type=range]{width:100%;accent-color:var(--gold)}
+.calc-results{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:11px;margin-top:8px}
+.calc-stat{background:var(--navy3);border:1px solid var(--line);border-radius:11px;padding:13px 14px}
+.calc-stat .cs-l{font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px}
+.calc-stat .cs-v{font-family:var(--mono);font-size:20px;font-weight:700;color:var(--ink);line-height:1}
+.calc-stat.hl{border-color:var(--gold)}
+.calc-stat.hl .cs-v{color:var(--gold-br)}
+.funnel{margin-top:20px;display:grid;gap:9px}
+.fn-row{display:flex;align-items:center;gap:11px}
+.fn-name{width:84px;font-size:12px;color:var(--muted);flex-shrink:0}
+.fn-bar{flex:1;height:28px;background:var(--navy3);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.fn-fill{height:100%;border-radius:7px;transition:width .35s ease}
+.fn-fill.a{background:linear-gradient(90deg,#3b6fd4,#5b8def)}
+.fn-fill.b{background:linear-gradient(90deg,var(--amber),var(--gold))}
+.fn-fill.c{background:linear-gradient(90deg,#1f9d6b,var(--green))}
+.fn-num{font-family:var(--mono);font-size:13px;font-weight:700;min-width:42px;text-align:right;color:var(--ink)}
+/* daily ad spend calendar */
+.cal-week{margin-bottom:15px}
+.cw-label{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:7px}
+.cw-phase{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-br);font-weight:700}
+.cw-total{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.cal-row{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.cal-day{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:9px 3px;text-align:center}
+.cd-n{display:block;font-family:var(--mono);font-size:9.5px;color:var(--faint);margin-bottom:3px}
+.cd-amt{display:block;font-family:var(--mono);font-size:12px;font-weight:700;color:var(--ink)}
+@media(max-width:560px){.cal-day{padding:7px 1px}.cd-amt{font-size:10.5px}.cd-n{font-size:8.5px}}
+/* hooks */
+.hook-cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:760px){.hook-cols{grid-template-columns:1fr}}
+.hook-col{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.hook-col .hc-head{font-family:var(--display);font-weight:800;font-size:15px;color:var(--gold-br);margin-bottom:12px;padding-bottom:9px;border-bottom:1px solid var(--line)}
+.hook-col ul{list-style:none;display:grid;gap:9px}
+.hook-col li{font-size:13.5px;color:var(--ink);line-height:1.4;padding-left:16px;position:relative}
+.hook-col li::before{content:"\2022";position:absolute;left:0;top:0;color:var(--gold);font-weight:700}
+/* offers */
+.offer-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:760px){.offer-grid{grid-template-columns:1fr}}
+.offer-card{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--green);border-radius:13px;padding:18px}
+.offer-card .of-tag{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--green);font-weight:700;margin-bottom:7px}
+.offer-card p{font-size:13.5px;color:var(--ink);line-height:1.5}
 </style>
 </head>
 <body>
@@ -291,6 +336,8 @@ footer .wrap{display:flex;flex-direction:column;gap:10px}
       <a href="#daily">Daily</a>
       <a href="#week">Weekly</a>
       <a href="#playbook">Ads</a>
+      <a href="#paidmethods">Paid plays</a>
+      <a href="#launchkit">Launch kit</a>
       <a href="#organic">Organic</a>
       <a href="#principles">Principles</a>
       <a href="#videos">Videos</a>
@@ -579,6 +626,263 @@ footer .wrap{display:flex;flex-direction:column;gap:10px}
         <span class="lbl">Example ad</span>
         <div class="ad-ex">Protect your home — get a fast alarm-system quote.</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADVANCED PAID -->
+<section class="section" id="paidmethods">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <div class="eyebrow">Operator playbook</div>
+      <h2>Advanced paid plays</h2>
+      <p>How the best paid marketers — Gary Vaynerchuk, Alex Hormozi, and the current Meta playbook — actually run ads now. Same compliance rules as the rest of the plan.</p>
+    </div>
+
+    <div class="strat-grid reveal">
+      <div class="strat-card">
+        <div class="sc-name">Creative is the new targeting <span class="sc-dom">Gary Vee + Meta</span></div>
+        <div class="sc-principle">The creative, not the audience, now decides who you reach and whether it works. Feed broad targeting and Meta's AI a high volume of strong creative and let it find the buyers.</div>
+        <div class="sc-apply"><b>Run it:</b> run 10-15 short vertical clips per campaign on broad targeting; let the algorithm sort it; refresh by swapping just the first three seconds.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Day trading attention <span class="sc-dom">Gary Vaynerchuk</span></div>
+        <div class="sc-principle">Treat paid like a trading desk: fast creative testing, daily measurement, and cultural timing. If an ad flops, it is almost always the creative, not the platform.</div>
+        <div class="sc-apply"><b>Run it:</b> launch small, read the numbers within days, kill losers fast, and move budget to winners every week.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Volume and thumb-stopping hooks <span class="sc-dom">Gary Vaynerchuk</span></div>
+        <div class="sc-principle">Make enough creative, edit it native to each platform, and win the first three seconds or lose the view. One idea per ad.</div>
+        <div class="sc-apply"><b>Run it:</b> batch-film at the door, cut many hooks from one shoot, and test a new opening line against the same video body.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">The grand slam offer <span class="sc-dom">Alex Hormozi</span></div>
+        <div class="sc-principle">Make the offer so good people feel stupid saying no: stack real value, add a guarantee, add a reason to act now. A great offer beats a clever ad.</div>
+        <div class="sc-apply"><b>Run it:</b> lead with a genuinely strong offer — free availability and speed check, free home-security assessment, or an install perk — not just "get internet."</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Lead magnets that convert <span class="sc-dom">Alex Hormozi</span></div>
+        <div class="sc-principle">Give away something valuable that solves one narrow problem and points to your core offer. Make it good enough to charge for, and build several versions to rotate.</div>
+        <div class="sc-apply"><b>Run it:</b> offer a free address speed-and-availability report, a home-security checklist, or an ISP bill audit, captured through your consented form.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Prove it, then pour fuel <span class="sc-dom">Alex Hormozi</span></div>
+        <div class="sc-principle">There are only four ways to get leads: warm outreach, cold outreach, content, and paid ads. Prove the offer and angle with organic first, then scale the winner with paid.</div>
+        <div class="sc-apply"><b>Run it:</b> find the hook that already performs in your organic clips, then put ad budget behind that exact angle.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Consolidate, do not fragment <span class="sc-dom">Meta 2026</span></div>
+        <div class="sc-principle">The algorithm needs data to learn, so one larger campaign beats five tiny ones. Keep the structure simple: one prospecting campaign plus one retargeting campaign.</div>
+        <div class="sc-apply"><b>Run it:</b> put all your best creative in a single broad prospecting campaign rather than splitting budget across many ad sets.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Retarget warm audiences <span class="sc-dom">Meta 2026</span></div>
+        <div class="sc-principle">People who already watched your videos or visited the site convert far cheaper than cold traffic. Always run a dedicated retargeting layer.</div>
+        <div class="sc-apply"><b>Run it:</b> send 15-20% of budget to video viewers and site visitors from the last 7-30 days with a direct "check your address" ad.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Low-friction lead forms <span class="sc-dom">Meta 2026</span></div>
+        <div class="sc-principle">Instant lead forms cut fill time from minutes to seconds and generate more leads, while Pixel and Conversions API feed the signal back so delivery improves.</div>
+        <div class="sc-apply"><b>Run it:</b> use instant forms that keep your consent box and privacy policy, sync leads to your inbox instantly, and respond within five minutes.</div>
+      </div>
+    </div>
+
+    <div class="s-head reveal" style="margin-top:54px">
+      <div class="eyebrow">Account structure</div>
+      <h2>How to split the budget</h2>
+      <p>Keep it simple and consolidated so the algorithm can learn. Three buckets, one prospecting engine.</p>
+    </div>
+    <div class="pillars reveal">
+      <div class="pillar"><div class="pi-n">70-80%</div><h4>Prospecting</h4><p>One broad campaign, many creatives. Your main engine for new leads.</p></div>
+      <div class="pillar"><div class="pi-n">15-20%</div><h4>Retargeting</h4><p>Warm audiences — video viewers and site visitors, last 7-30 days.</p></div>
+      <div class="pillar"><div class="pi-n">5-10%</div><h4>Testing</h4><p>New creative concepts and hooks. Graduate winners into prospecting.</p></div>
+    </div>
+
+    <div class="prohibit reveal" style="margin-top:40px">
+      <h3>⛔ Paid still follows the rules</h3>
+      <ul>
+        <li>Frontier paid search and social stay generic — no carrier brand terms, logos, pricing, offers, or the "Frontier Authorized Sales Agent" phrase; run PerfectVision's negative-keyword list and submit each campaign for review</li>
+        <li>EarthLink-branded paid is allowed only with PerfectVision approval; security ads run under the Direct Protection Security brand with honest claims</li>
+        <li>Recruiting and hiring ads on Meta fall under the Employment special ad category — expect restricted targeting (no detailed interests, wider radius, age and gender limits) and never imply guaranteed income</li>
+        <li>Every lead form keeps the consent box, privacy policy, and timestamped capture you already built</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- LAUNCH KIT -->
+<section class="section" id="launchkit">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <div class="eyebrow">Launch kit</div>
+      <h2>Build, budget, and launch</h2>
+      <p>Pick a campaign, set your numbers, and follow the calendar. Plug-and-play hooks, offers, and a testing schedule your team can run straight from this page.</p>
+    </div>
+
+    <div class="sub-label reveal">Campaign options</div>
+    <div class="strat-grid reveal">
+      <div class="strat-card">
+        <div class="sc-name">Fiber availability lead-gen <span class="sc-dom">Leads · core</span></div>
+        <div class="sc-principle">Drive people to check fiber availability at their address. Broad local targeting, instant lead form, a speed-and-availability hook.</div>
+        <div class="sc-apply"><b>Run it:</b> your main engine — point it straight at the consented availability form.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Home alarm lead-gen <span class="sc-dom">Leads · core</span></div>
+        <div class="sc-principle">Reach local homeowners with the watch-your-home angle. Broad local targeting, instant form, a monitoring-benefit hook.</div>
+        <div class="sc-apply"><b>Run it:</b> strongest around travel seasons and after local break-in news.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Retargeting <span class="sc-dom">Warm · convert</span></div>
+        <div class="sc-principle">Re-engage everyone who watched your videos or visited the site with a direct "check your address" ask. The cheapest leads you will get.</div>
+        <div class="sc-apply"><b>Run it:</b> always on, 15-20% of budget, 7-30 day windows.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Local video awareness <span class="sc-dom">Top of funnel</span></div>
+        <div class="sc-principle">Run native doorstep and explainer videos to build a warm audience you can retarget later. Optimize for video views and reach.</div>
+        <div class="sc-apply"><b>Run it:</b> feed the retargeting pool — cheap attention now, cheap leads later.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Seasonal offer push <span class="sc-dom">Promo · timed</span></div>
+        <div class="sc-principle">Put a limited-window offer behind your best hook: pre-vacation security, back-to-school internet, holiday travel safety.</div>
+        <div class="sc-apply"><b>Run it:</b> short bursts with real urgency; do not run promos year-round.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Recruiting (1099 reps) <span class="sc-dom">Employment category</span></div>
+        <div class="sc-principle">Hire reps with opportunity-and-culture creative. Meta treats this as the Employment special ad category, so targeting is restricted.</div>
+        <div class="sc-apply"><b>Run it:</b> no detailed interest targeting, wider radius, and never imply guaranteed income.</div>
+      </div>
+    </div>
+
+    <div class="sub-label reveal">Ad spend and conversion calculator</div>
+    <p class="mini-note" style="font-style:normal">Drag the sliders to model your spend, leads, and sales. Everything updates live, including the daily calendar below.</p>
+    <div class="calc-wrap reveal">
+      <div class="calc-row"><div class="cl">Monthly ad budget <span class="cv" id="lk-budget-v">$1,500</span></div><input type="range" id="lk-budget" min="300" max="10000" step="50" value="1500"></div>
+      <div class="calc-row"><div class="cl">Cost per lead <span class="cv" id="lk-cpl-v">$20</span></div><input type="range" id="lk-cpl" min="5" max="80" step="1" value="20"></div>
+      <div class="calc-row"><div class="cl">Lead to qualified rate <span class="cv" id="lk-qual-v">40%</span></div><input type="range" id="lk-qual" min="10" max="80" step="1" value="40"></div>
+      <div class="calc-row"><div class="cl">Close rate <span class="cv" id="lk-close-v">30%</span></div><input type="range" id="lk-close" min="5" max="70" step="1" value="30"></div>
+      <div class="calc-row"><div class="cl">Revenue per sale <span class="cv" id="lk-rev-v">$250</span></div><input type="range" id="lk-rev" min="50" max="800" step="10" value="250"></div>
+      <div class="calc-results">
+        <div class="calc-stat"><div class="cs-l">Leads / mo</div><div class="cs-v" id="lk-leads">75</div></div>
+        <div class="calc-stat"><div class="cs-l">Qualified</div><div class="cs-v" id="lk-qualified">30</div></div>
+        <div class="calc-stat"><div class="cs-l">Sales / mo</div><div class="cs-v" id="lk-sales">9</div></div>
+        <div class="calc-stat hl"><div class="cs-l">Revenue / mo</div><div class="cs-v" id="lk-revenue">$2,250</div></div>
+        <div class="calc-stat"><div class="cs-l">Cost / sale</div><div class="cs-v" id="lk-cps">$167</div></div>
+        <div class="calc-stat hl"><div class="cs-l">ROAS</div><div class="cs-v" id="lk-roas">1.5x</div></div>
+        <div class="calc-stat hl"><div class="cs-l">Profit / mo</div><div class="cs-v" id="lk-profit">$750</div></div>
+      </div>
+      <div class="funnel">
+        <div class="fn-row"><span class="fn-name">Leads</span><div class="fn-bar"><div class="fn-fill a" id="lk-bar-leads" style="width:100%"></div></div><span class="fn-num" id="lk-n-leads">75</span></div>
+        <div class="fn-row"><span class="fn-name">Qualified</span><div class="fn-bar"><div class="fn-fill b" id="lk-bar-qual" style="width:40%"></div></div><span class="fn-num" id="lk-n-qual">30</span></div>
+        <div class="fn-row"><span class="fn-name">Sales</span><div class="fn-bar"><div class="fn-fill c" id="lk-bar-sales" style="width:12%"></div></div><span class="fn-num" id="lk-n-sales">9</span></div>
+      </div>
+    </div>
+
+    <div class="sub-label reveal">Daily ad spend calendar</div>
+    <p class="mini-note" style="font-style:normal">A 28-day ramp: test light, validate, then scale. The total tracks your monthly budget above. <b style="color:var(--gold-br)">4-week total: <span id="lk-cal-total">$1,500</span></b></p>
+    <div id="lk-cal" class="reveal"></div>
+
+    <div class="sub-label reveal">Step-by-step: how to spend it</div>
+    <div class="strat-grid reveal">
+      <div class="strat-card">
+        <div class="sc-name">Week 1 — Test <span class="sc-dom">~60% daily</span></div>
+        <div class="sc-principle">Spend light while you learn. Run several hooks against one offer in one format. You are buying data, not sales yet.</div>
+        <div class="sc-apply"><b>Run it:</b> do not scale; just find your two cheapest hooks by cost per lead.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Week 2 — Validate <span class="sc-dom">~90% daily</span></div>
+        <div class="sc-principle">Take the winning hooks and confirm they hold up. Add your best format. Watch cost per lead and lead quality.</div>
+        <div class="sc-apply"><b>Run it:</b> kill anything above your target cost per lead.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Week 3 — Scale <span class="sc-dom">~120% daily</span></div>
+        <div class="sc-principle">Pour budget into the proven hook and format. Turn on retargeting. Keep one small test running on the side.</div>
+        <div class="sc-apply"><b>Run it:</b> raise budget gradually so the algorithm keeps learning.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Week 4 — Scale+ <span class="sc-dom">~130% daily</span></div>
+        <div class="sc-principle">Push the winners harder and test a fresh angle or geo. Lock in your cost per sale and ROAS for the month.</div>
+        <div class="sc-apply"><b>Run it:</b> refresh creative before fatigue sets in.</div>
+      </div>
+    </div>
+
+    <div class="sub-label reveal">Generic hooks you can run</div>
+    <div class="hook-cols reveal">
+      <div class="hook-col">
+        <div class="hc-head">Fiber internet</div>
+        <ul>
+          <li>Still buffering on movie night? Your street may already have fiber.</li>
+          <li>Your address might qualify for fiber speeds and most neighbors have no idea.</li>
+          <li>Working from home on slow internet? See if fiber reaches your home.</li>
+          <li>Same monthly bill, much faster internet, if fiber is on your block.</li>
+          <li>Gamers and streamers: fiber means no more lag. Is your street wired?</li>
+          <li>One slow connection, four people online. Fiber fixes that. Check your address.</li>
+          <li>New to the neighborhood? Find out if your home can get fiber today.</li>
+          <li>Zoom freezing again? Fiber could be available at your door right now.</li>
+          <li>Tired of paying more for less? See what fiber can do for your house.</li>
+          <li>Fast enough for the whole family. Check if fiber reaches your address.</li>
+        </ul>
+      </div>
+      <div class="hook-col">
+        <div class="hc-head">Home alarm and monitoring</div>
+        <ul>
+          <li>Going out of town? Watch your home from your phone while you are away.</li>
+          <li>Know who is at your door, even when you are not home.</li>
+          <li>Package thieves on your street? Put eyes on your porch 24/7.</li>
+          <li>Peace of mind for an empty house: monitored alarm while you travel.</li>
+          <li>See your home day or night, from anywhere. A smarter way to feel safe.</li>
+          <li>Away for the weekend? Get an alert the second something is wrong.</li>
+          <li>Protect what matters when you are not there. Monitoring that never sleeps.</li>
+          <li>Your dog cannot call for help, but a monitored alarm can.</li>
+          <li>Travel without the worry: real-time alerts and eyes on your home.</li>
+          <li>A house that watches itself when you cannot. See how monitoring works.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sub-label reveal">Offer copy</div>
+    <div class="offer-grid reveal">
+      <div class="offer-card"><div class="of-tag">Fiber</div><p>Free address check: in about a minute we will tell you the fastest internet your home can actually get. No obligation, no pushy sales.</p></div>
+      <div class="offer-card"><div class="of-tag">Fiber</div><p>Free speed-and-availability report for your address, so you know your real options before you ever think about switching.</p></div>
+      <div class="offer-card"><div class="of-tag">Security</div><p>Free home security walkthrough: see exactly how to watch your house from your phone while you are away. Zero cost, zero pressure.</p></div>
+      <div class="offer-card"><div class="of-tag">Security</div><p>Free alarm assessment plus same-week install windows, so your home is covered before your next trip out of town.</p></div>
+      <div class="offer-card"><div class="of-tag">Bundle</div><p>Free home check in one visit: fiber availability and a security assessment together. Faster internet and a safer house in one stop.</p></div>
+      <div class="offer-card"><div class="of-tag">Urgency</div><p>Booking this week only: free assessment and priority install scheduling for the next few homes on your street.</p></div>
+    </div>
+
+    <div class="sub-label reveal">Creative-testing schedule</div>
+    <div class="strat-grid reveal">
+      <div class="strat-card">
+        <div class="sc-name">Week 1 — Hooks <span class="sc-dom">Biggest lever</span></div>
+        <div class="sc-principle">Run 5-8 different opening lines with everything else identical. The first three seconds decide reach. Keep the top two by cost per lead.</div>
+        <div class="sc-apply"><b>Run it:</b> one variable only: the hook.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Week 2 — Formats <span class="sc-dom">Find the winner</span></div>
+        <div class="sc-principle">Winning hook, new formats: talking-head, doorstep UGC, text-on-screen, carousel. See which converts cheapest.</div>
+        <div class="sc-apply"><b>Run it:</b> hold the hook constant; only the format changes.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Week 3 — Offers <span class="sc-dom">Sharpen the ask</span></div>
+        <div class="sc-principle">Winning hook and format, 2-3 offers: free availability check vs free report vs install perk. Let cost per lead decide.</div>
+        <div class="sc-apply"><b>Run it:</b> the offer often beats the ad — test it deliberately.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Week 4 — Audience and scale <span class="sc-dom">Lock it in</span></div>
+        <div class="sc-principle">Winning combo; test geo radius and placements, then move budget onto the champions.</div>
+        <div class="sc-apply"><b>Run it:</b> graduate winners; retire anything fatigued.</div>
+      </div>
+    </div>
+    <p class="mini-note" style="font-style:normal">Refresh creative every 2-3 weeks to fight fatigue, and always keep one new test running.</p>
+
+    <div class="prohibit reveal" style="margin-top:36px">
+      <h3>⛔ Keep it compliant</h3>
+      <ul>
+        <li>Keep fiber ads generic — no carrier brand names, logos, pricing, or the "Frontier Authorized Sales Agent" phrase; run PerfectVision's negative keywords and submit campaigns for review</li>
+        <li>EarthLink-branded ads need PerfectVision approval; security ads run under Direct Protection Security with honest, substantiated claims</li>
+        <li>Recruiting ads use Meta's Employment special ad category — restricted targeting and no income guarantees</li>
+        <li>The conversion numbers here are planning estimates you adjust, not promises — your real cost per lead, close rate, and commission decide the outcome</li>
+        <li>Every lead form keeps the consent box, privacy policy, and timestamped capture you already built</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -1029,6 +1333,58 @@ footer .wrap{display:flex;flex-direction:column;gap:10px}
   }
   window.addEventListener("scroll", onScroll, {passive:true});
   onScroll();
+
+  // ---- Launch kit: ad spend + conversion calculator and daily calendar ----
+  (function(){
+    var bEl=$("lk-budget"), cplEl=$("lk-cpl"), qEl=$("lk-qual"), clEl=$("lk-close"), rEl=$("lk-rev");
+    if(!bEl){ return; }
+    function pctTxt(n){ return Math.round(n)+"%"; }
+    function num(n){ return Math.round(n).toLocaleString("en-US"); }
+    var phases=[{n:"Test",m:0.6},{n:"Validate",m:0.9},{n:"Scale",m:1.2},{n:"Scale+",m:1.3}];
+    function recompute(){
+      var budget=+bEl.value, cpl=+cplEl.value, q=(+qEl.value)/100, cl=(+clEl.value)/100, rev=+rEl.value;
+      $("lk-budget-v").textContent=money(budget);
+      $("lk-cpl-v").textContent=money(cpl);
+      $("lk-qual-v").textContent=pctTxt(+qEl.value);
+      $("lk-close-v").textContent=pctTxt(+clEl.value);
+      $("lk-rev-v").textContent=money(rev);
+      var leads=cpl>0?budget/cpl:0;
+      var qualified=leads*q;
+      var sales=qualified*cl;
+      var revenue=sales*rev;
+      var cps=sales>0?budget/sales:0;
+      var roas=budget>0?revenue/budget:0;
+      var profit=revenue-budget;
+      $("lk-leads").textContent=num(leads);
+      $("lk-qualified").textContent=num(qualified);
+      $("lk-sales").textContent=num(sales);
+      $("lk-revenue").textContent=money(revenue);
+      $("lk-cps").textContent=money(cps);
+      $("lk-roas").textContent=(Math.round(roas*10)/10)+"x";
+      $("lk-profit").textContent=money(profit);
+      var base=leads||1;
+      $("lk-bar-leads").style.width="100%";
+      $("lk-bar-qual").style.width=Math.max(2,(qualified/base)*100)+"%";
+      $("lk-bar-sales").style.width=Math.max(2,(sales/base)*100)+"%";
+      $("lk-n-leads").textContent=num(leads);
+      $("lk-n-qual").textContent=num(qualified);
+      $("lk-n-sales").textContent=num(sales);
+      var dailyBase=budget/28, day=1, grand=0, html="";
+      for(var w=0; w<4; w++){
+        var daily=dailyBase*phases[w].m, weekTotal=0, cells="";
+        for(var d=0; d<7; d++){
+          var amt=Math.round(daily); weekTotal+=amt; grand+=amt;
+          cells+='<div class="cal-day"><span class="cd-n">Day '+day+'</span><span class="cd-amt">'+money(amt)+'</span></div>';
+          day++;
+        }
+        html+='<div class="cal-week"><div class="cw-label"><span class="cw-phase">Week '+(w+1)+' · '+phases[w].n+'</span><span class="cw-total">'+money(weekTotal)+' / wk</span></div><div class="cal-row">'+cells+'</div></div>';
+      }
+      $("lk-cal").innerHTML=html;
+      $("lk-cal-total").textContent=money(grand);
+    }
+    [bEl,cplEl,qEl,clEl,rEl].forEach(function(el){ el.addEventListener("input", recompute); });
+    recompute();
+  })();
 
   // ---- Collapsible sections (every section minimizes / unminimizes) ----
   document.querySelectorAll("section.section").forEach(function(sec){
