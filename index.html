@@ -378,6 +378,52 @@ footer .wrap{display:flex;flex-direction:column;gap:10px}
 .jd-copy{font-family:var(--display);font-weight:700;font-size:12px;border:1px solid var(--gold);background:var(--gold);color:#1a1206;border-radius:8px;padding:7px 15px;cursor:pointer;transition:.15s;white-space:nowrap}
 .jd-copy:hover{filter:brightness(1.08)}
 .jd-text{white-space:pre-wrap;font-family:var(--body);font-size:13px;line-height:1.6;color:var(--ink);padding:18px;user-select:text;max-height:340px;overflow:auto}
+/* field laws + announcement */
+.announce{background:linear-gradient(135deg,rgba(245,166,35,.12),rgba(214,69,69,.07));border:1px solid var(--gold);border-radius:14px;padding:20px 22px;margin-bottom:28px;display:flex;gap:15px;align-items:flex-start}
+.an-badge{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;background:var(--gold);color:#1a1206;padding:5px 11px;border-radius:6px;white-space:nowrap;flex-shrink:0;margin-top:2px}
+.an-body h4{font-family:var(--display);font-weight:800;font-size:16px;margin:0 0 5px}
+.an-body p{font-size:13.5px;color:var(--ink);line-height:1.55;margin:0}
+.an-body b{color:var(--gold-br)}
+.law-block{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;margin-bottom:14px}
+.law-head{display:flex;align-items:baseline;gap:10px;margin-bottom:11px}
+.law-num{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--gold-br);flex-shrink:0}
+.law-name{font-family:var(--display);font-weight:800;font-size:17px}
+.law-principle{font-size:13.5px;color:var(--muted);line-height:1.55;margin-bottom:14px;padding-left:13px;border-left:2px solid var(--gold)}
+.law-principle b{color:var(--ink)}
+.law-steps{margin:0;padding-left:0;list-style:none;display:grid;gap:9px}
+.law-steps li{position:relative;padding-left:18px;font-size:13.5px;color:var(--ink);line-height:1.5}
+.law-steps li::before{content:"\2022";position:absolute;left:0;top:0;color:var(--gold);font-weight:700}
+.law-steps li b{color:var(--gold-br)}
+/* automation matrix */
+.auto-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:760px){.auto-grid{grid-template-columns:1fr}}
+.auto-card{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:18px}
+.ac-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:9px}
+.ac-name{font-family:var(--display);font-weight:800;font-size:15px}
+.auto-status{font-family:var(--mono);font-size:9.5px;letter-spacing:.07em;text-transform:uppercase;font-weight:700;padding:4px 9px;border-radius:5px;white-space:nowrap}
+.auto-status.full{background:rgba(31,157,107,.16);color:var(--green)}
+.auto-status.partial{background:rgba(245,166,35,.16);color:var(--gold-br)}
+.auto-status.manual{background:rgba(214,69,69,.14);color:var(--red)}
+.auto-card p{font-size:13px;color:var(--ink);line-height:1.5;margin:0}
+.auto-card p b{color:var(--gold-br)}
+.ch-tag{display:inline-block;font-family:var(--mono);font-size:8.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;padding:2px 7px;border-radius:5px;margin-left:7px;white-space:nowrap;vertical-align:middle}
+.ch-tag.free{background:rgba(31,157,107,.16);color:var(--green)}
+.ch-tag.under{background:rgba(245,166,35,.16);color:var(--gold-br)}
+.ch-tag.paid{background:rgba(255,255,255,.06);color:var(--muted);border:1px solid var(--line2)}
+.ch-tag.core{background:rgba(245,166,35,.12);color:var(--gold)}
+.uu-list{display:flex;flex-direction:column}
+.uu-row{padding:13px 0;border-bottom:1px solid var(--line)}
+.uu-row:last-child{border-bottom:none}
+.uu-rtop{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:5px}
+.uu-name{font-family:var(--display);font-weight:700;font-size:13.5px;color:var(--ink)}
+.uu-spend{font-family:var(--mono);font-size:13px;color:var(--gold-br);font-weight:700;white-space:nowrap}
+.uu-track{height:6px;background:var(--navy2);border-radius:99px;overflow:hidden;margin:6px 0 7px}
+.uu-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--gold),var(--gold-br))}
+.uu-metrics{font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.55}
+.uu-metrics b{color:var(--green)}
+.uu-row.tot{border-top:2px solid var(--gold);border-bottom:none;margin-top:4px;padding-top:12px}
+.ft-tier{cursor:pointer}
+.ft-tier:hover{filter:brightness(1.12)}
 </style>
 </head>
 <body>
@@ -390,15 +436,20 @@ footer .wrap{display:flex;flex-direction:column;gap:10px}
       <a href="#gate">Setup</a>
       <a href="#channels">Allowed</a>
       <a href="#budget">Budget</a>
+      <a href="#laws">The laws</a>
       <a href="#daily">Daily</a>
       <a href="#week">Weekly</a>
       <a href="#playbook">Ads</a>
       <a href="#paidmethods">Paid plays</a>
+      <a href="#allchannels">All channels</a>
+      <a href="#uuplan">Spend plan</a>
+      <a href="#fibertop5">Fiber top 5</a>
       <a href="#launchkit">Launch kit</a>
       <a href="#tracker">Tracker</a>
       <a href="#recruitads">Recruit ads</a>
       <a href="#jobposts">Job posts</a>
       <a href="#organic">Organic</a>
+      <a href="#automation">Automation</a>
       <a href="#principles">Principles</a>
       <a href="#videos">Videos</a>
       <a href="#compliance">Compliance</a>
@@ -578,6 +629,104 @@ footer .wrap{display:flex;flex-direction:column;gap:10px}
         </div>
         <p class="mini-note">Estimates only — calibrate cost per lead to your own results after week one. Monthly figures use 30.4 days.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- FIELD LAWS -->
+<section class="section" id="laws">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <div class="eyebrow">Field playbook</div>
+      <h2>The seven laws of the field</h2>
+      <p>The mindset and systems behind every great rep. Master these and the daily numbers take care of themselves.</p>
+    </div>
+
+    <div class="announce reveal">
+      <span class="an-badge">New · Monday</span>
+      <div class="an-body">
+        <h4>Mobile handoff program launches Monday</h4>
+        <p>Refer customers for Verizon / AT&amp;T mobile plans through a simple form and earn <b>$50 per line</b> — without handling the sale yourself. Hand off the customer, we close it, you get paid.</p>
+      </div>
+    </div>
+
+    <div class="sub-label reveal">Key takeaways</div>
+    <div class="pillars reveal">
+      <div class="pillar"><div class="pi-n">01</div><h4>Systems over motivation</h4><p>Consistency in daily actions, like knocking 120 doors, creates a compound effect that outperforms occasional high-effort days.</p></div>
+      <div class="pillar"><div class="pi-n">02</div><h4>Data is your guide</h4><p>Track KPIs (doors, conversations, closes) to spot weaknesses, like a close rate dropping from 13% to 7%, and set realistic goals.</p></div>
+      <div class="pillar"><div class="pi-n">03</div><h4>Own your results</h4><p>Take responsibility and adapt to challenges instead of blaming outside factors. Ownership unlocks freedom and control.</p></div>
+    </div>
+
+    <div class="sub-label reveal">The seven laws</div>
+
+    <div class="law-block reveal">
+      <div class="law-head"><span class="law-num">01</span><span class="law-name">Law of Clarity</span></div>
+      <div class="law-principle"><b>You can't hit a target you can't see.</b> Success requires a clear vision of your goals and the person you need to become to achieve them.</div>
+      <ul class="law-steps">
+        <li><b>Write goals down:</b> use the "I am so happy and grateful now that..." framework to build emotional investment.</li>
+        <li><b>Make goals visible:</b> vision boards, screensavers, or daily rewrites keep your purpose top of mind.</li>
+        <li><b>Reverse-engineer:</b> define the specific actions and habits required to reach your goal.</li>
+      </ul>
+    </div>
+
+    <div class="law-block reveal">
+      <div class="law-head"><span class="law-num">02</span><span class="law-name">Law of Consistency</span></div>
+      <div class="law-principle"><b>Small, consistent actions create a compound effect</b> that outperforms occasional, high-effort days.</div>
+      <ul class="law-steps">
+        <li><b>Build systems:</b> rely on daily habits (knocking 100 doors) to remove emotion from performance and avoid "falling to the level of your systems."</li>
+        <li><b>Focus on lead indicators:</b> prioritize daily actions over lag indicators (results) to build momentum.</li>
+        <li><b>Follow the formula:</b> competence (consistent action) → confidence (predictable results) → more consistency.</li>
+      </ul>
+    </div>
+
+    <div class="law-block reveal">
+      <div class="law-head"><span class="law-num">03</span><span class="law-name">Law of Averages</span></div>
+      <div class="law-principle"><b>Consistent action reveals predictable ratios.</b> Tracking these KPIs gives you objective data to guide improvement.</div>
+      <ul class="law-steps">
+        <li><b>Track KPIs daily:</b> doors knocked, conversations, closes, installs.</li>
+        <li><b>Use data for pattern recognition:</b> spot weaknesses (a close rate drop from 13% to 7%) and decide objectively where to train.</li>
+        <li><b>Set data-driven goals:</b> use your KPIs to calculate the activity (doors knocked) needed to hit a specific deal target.</li>
+      </ul>
+    </div>
+
+    <div class="law-block reveal">
+      <div class="law-head"><span class="law-num">04</span><span class="law-name">Law of Intentionality</span></div>
+      <div class="law-principle"><b>Success is the result of intentional planning, not accident.</b></div>
+      <ul class="law-steps">
+        <li><b>Plan your entire day:</b> schedule workouts, meals, and field strategy in advance.</li>
+        <li><b>Map your turf:</b> know your starting point and route before you begin knocking.</li>
+        <li><b>Prepare for each door:</b> observe the home to tailor your pitch and be fully present with the customer.</li>
+      </ul>
+    </div>
+
+    <div class="law-block reveal">
+      <div class="law-head"><span class="law-num">05</span><span class="law-name">Law of Adaptability</span></div>
+      <div class="law-principle"><b>Your ability to adapt to challenges determines your success.</b> A plan is only useful until you face the unexpected.</div>
+      <ul class="law-steps">
+        <li><b>Anticipate challenges:</b> research your turf, but be ready for inaccurate data, like unexpected competitors.</li>
+        <li><b>Flip negatives into levers:</b> use objections as opportunities to differentiate your service.</li>
+        <li><b>Stay positive:</b> focus on what you control (energy, attitude) and use available resources (trainings, managers) to find solutions.</li>
+      </ul>
+    </div>
+
+    <div class="law-block reveal">
+      <div class="law-head"><span class="law-num">06</span><span class="law-name">Law of Ownership</span></div>
+      <div class="law-principle"><b>Taking ownership of problems is the only way to solve them.</b></div>
+      <ul class="law-steps">
+        <li><b>Take personal responsibility:</b> focus on solutions instead of assigning blame.</li>
+        <li><b>Be accountable:</b> recognize you are in control of your results.</li>
+        <li><b>Reject victimhood:</b> it is a barrier to improvement and a common reason for termination.</li>
+      </ul>
+    </div>
+
+    <div class="law-block reveal">
+      <div class="law-head"><span class="law-num">07</span><span class="law-name">Law of the Lid</span></div>
+      <div class="law-principle"><b>Your self-belief and leadership skills set a ceiling, a "lid," on your potential</b> and your team's effectiveness.</div>
+      <ul class="law-steps">
+        <li><b>Identify your current lid:</b> audit your beliefs and skills to understand your ceiling.</li>
+        <li><b>Raise your lid intentionally:</b> close the gap to your next level through training, skill development, and personal growth.</li>
+        <li><b>Embrace continuous improvement:</b> raising your lid is an ongoing process, never a one-time fix.</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -767,6 +916,280 @@ footer .wrap{display:flex;flex-direction:column;gap:10px}
         <li>Every lead form keeps the consent box, privacy policy, and timestamped capture you already built</li>
       </ul>
     </div>
+  </div>
+</section>
+
+<!-- ALL CHANNELS -->
+<section class="section" id="allchannels">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <div class="eyebrow">The full menu</div>
+      <h2>Every channel worth testing</h2>
+      <p>Most reps crowd into the same two channels — Facebook and Google — and ignore a dozen cheaper, less competitive ones. The menu below runs from free community boards to paid search. Test one new channel at a time, track its cost per lead in the tracker, and double down on what works in your ZIPs.</p>
+    </div>
+
+    <div class="keyrule reveal">
+      <p><b>Compliance first, on every channel.</b> Keep fiber ads generic in public — no carrier brand, logo, or pricing — and run all security ads under the Direct Protection Security brand. The underused channels below are flagged in amber; they are where the cheapest leads usually hide.</p>
+    </div>
+
+    <div class="sub-label reveal">Where to start</div>
+    <div class="pillars reveal">
+      <div class="pillar"><div class="pi-n">01</div><h4>No budget, time to spare</h4><p>Work the free lane first: Craigslist, Nextdoor, Marketplace, Google Business, bulletin boards, and a referral program.</p></div>
+      <div class="pillar"><div class="pi-n">02</div><h4>Some budget</h4><p>Layer Meta new-mover lead forms and Google Local Services Ads, the two highest-ROI paid plays.</p></div>
+      <div class="pillar"><div class="pi-n">03</div><h4>Scaling up</h4><p>Add a new-mover or permit data feed and test one underused channel each week, keeping only what pays.</p></div>
+    </div>
+
+    <div class="sub-label reveal">Hyperlocal and community marketplaces</div>
+    <div class="strat-grid reveal">
+      <div class="strat-card">
+        <div class="sc-name">Craigslist<span class="ch-tag under">Underused</span></div>
+        <div class="sc-principle">Still one of the highest-intent boards for local services. Homeowners actively browse the services and for-sale sections, and almost no other fiber or security reps post there.</div>
+        <div class="sc-apply"><b>Start:</b> Post under services, rotate fresh copy every few days so it does not get flagged, and link to a generic landing page. Cost: about $3-5 per services post in most metros.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Nextdoor<span class="ch-tag under">Underused</span></div>
+        <div class="sc-principle">Neighborhood-level trust is unmatched here, and a recommendation from a real neighbor outweighs any ad.</div>
+        <div class="sc-apply"><b>Start:</b> Run a sponsored local post and ask every happy install to recommend you in their own feed. Cost: roughly $8-14 per lead in affluent ZIPs.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Facebook groups and Marketplace<span class="ch-tag free">Free</span></div>
+        <div class="sc-principle">Local buy and sell groups and Marketplace put you in front of movers and homeowners at no cost.</div>
+        <div class="sc-apply"><b>Start:</b> List a generic services post on Marketplace and share real value in local groups where the rules allow. Cost: free.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Local subreddits<span class="ch-tag free">Free</span></div>
+        <div class="sc-principle">City subreddits like r/yourtown carry high local intent and reward helpful, non-salesy answers.</div>
+        <div class="sc-apply"><b>Start:</b> Answer internet and security questions and mention you are a local installer where the sub permits it. Cost: free.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">OfferUp and VarageSale<span class="ch-tag under">Underused</span></div>
+        <div class="sc-principle">Marketplace apps beyond Facebook reach people furnishing and setting up a new home.</div>
+        <div class="sc-apply"><b>Start:</b> Post a simple services listing and refresh it weekly. Cost: free.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Patch and local news<span class="ch-tag under">Underused</span></div>
+        <div class="sc-principle">Hyperlocal news sites sell cheap local display and sponsored articles in your exact towns.</div>
+        <div class="sc-apply"><b>Start:</b> Buy a local-news display placement or a sponsored post in the towns you work. Cost: low, varies by market.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Community bulletin boards<span class="ch-tag free">Free</span></div>
+        <div class="sc-principle">Libraries, laundromats, coffee shops, gyms, and grocery boards still get real eyes for free.</div>
+        <div class="sc-apply"><b>Start:</b> Pin a tear-off flyer with a QR code and a unique link so you can track scans, and refresh it monthly. Cost: printing only.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Alignable<span class="ch-tag under">Underused</span></div>
+        <div class="sc-principle">A small-business networking site built for local referrals and partnerships.</div>
+        <div class="sc-apply"><b>Start:</b> Build a profile and connect with local realtors, movers, and contractors. Cost: free tier available.</div>
+      </div>
+    </div>
+
+    <div class="sub-label reveal">Search and high intent</div>
+    <div class="strat-grid reveal">
+      <div class="strat-card">
+        <div class="sc-name">Google Search Ads<span class="ch-tag paid">Paid</span></div>
+        <div class="sc-principle">Captures people actively searching for internet or security in your area right now.</div>
+        <div class="sc-apply"><b>Start:</b> Run tight local keyword and competitor-conquest campaigns, and gate availability behind a ZIP field to pre-qualify. Cost: higher CPL, high intent.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Google Local Services Ads<span class="ch-tag paid">Paid</span></div>
+        <div class="sc-principle">Pay-per-lead, Google-screened, and shown at the very top with a trust badge, which is excellent for security.</div>
+        <div class="sc-apply"><b>Start:</b> Apply for the Google Screened or Guaranteed badge and turn on Local Services Ads for the security brand. Cost: per validated lead.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Microsoft (Bing) Ads<span class="ch-tag under">Underused</span></div>
+        <div class="sc-principle">Far less competition than Google and an older, homeowner-heavy audience, often at a lower cost per click.</div>
+        <div class="sc-apply"><b>Start:</b> Mirror your Google search campaigns into Microsoft Ads to pick up cheap extra volume. Cost: usually below Google CPCs.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Google Business Profile<span class="ch-tag free">Free</span></div>
+        <div class="sc-principle">A free map listing that drives calls and direction requests whenever locals search nearby.</div>
+        <div class="sc-apply"><b>Start:</b> Claim and fully complete the profile, gather reviews, and post weekly updates. Cost: free.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Yelp<span class="ch-tag paid">Paid</span></div>
+        <div class="sc-principle">A free listing plus optional paid placement, with strong intent for home services and security.</div>
+        <div class="sc-apply"><b>Start:</b> Claim the listing and collect reviews first, then test Yelp ads only if the cost per lead holds. Cost: free listing, paid ads optional.</div>
+      </div>
+    </div>
+
+    <div class="sub-label reveal">Paid social</div>
+    <div class="strat-grid reveal">
+      <div class="strat-card">
+        <div class="sc-name">Meta (Facebook and Instagram)<span class="ch-tag core">Core</span></div>
+        <div class="sc-principle">The lowest-CPL lead forms with the best local targeting, especially the recently moved life event.</div>
+        <div class="sc-apply"><b>Start:</b> Run new-mover and ZIP-targeted lead-form ad sets and keep all fiber creative generic. Cost: about $18-32 per lead locally.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">TikTok<span class="ch-tag under">Underused</span></div>
+        <div class="sc-principle">Cheap reach and a younger homeowner and renter audience that responds to authentic short video.</div>
+        <div class="sc-apply"><b>Start:</b> Post quick install clips and run Spark ads from a local handle. Cost: low CPMs.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">YouTube<span class="ch-tag paid">Paid</span></div>
+        <div class="sc-principle">Cheap pre-roll by ZIP plus evergreen explainer content that keeps working for months.</div>
+        <div class="sc-apply"><b>Start:</b> Run 15-second non-skip ads in your ZIPs and build a few fiber-vs-cable explainers. Cost: low per view.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Snapchat<span class="ch-tag under">Underused</span></div>
+        <div class="sc-principle">Inexpensive local reach for a younger renter audience in dense areas.</div>
+        <div class="sc-apply"><b>Start:</b> Run geofilters and local awareness ads near apartment clusters. Cost: low.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Pinterest<span class="ch-tag under">Underused</span></div>
+        <div class="sc-principle">New-home and home-improvement planners search here, and almost no ISP or security competitors are present.</div>
+        <div class="sc-apply"><b>Start:</b> Pin smart-home and new-mover checklists that link to a generic landing page. Cost: low.</div>
+      </div>
+    </div>
+
+    <div class="sub-label reveal">Direct mail and offline</div>
+    <div class="strat-grid reveal">
+      <div class="strat-card">
+        <div class="sc-name">EDDM direct mail<span class="ch-tag under">Underused</span></div>
+        <div class="sc-principle">USPS Every Door Direct Mail blankets a whole carrier route by ZIP for about 20-25 cents a piece, with no mailing list required.</div>
+        <div class="sc-apply"><b>Start:</b> Mail an oversized postcard to your best routes and pair it with a digital retarget for a dual touch. Cost: about $0.20-0.25 per piece plus printing.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Door hangers<span class="ch-tag paid">Offline</span></div>
+        <div class="sc-principle">A leave-behind for every no-answer that keeps selling after you walk away.</div>
+        <div class="sc-apply"><b>Start:</b> Hang a branded card with a QR code on every not-home and track the scans. Cost: printing only.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Yard signs at installs<span class="ch-tag paid">Offline</span></div>
+        <div class="sc-principle">Every new install is a billboard, and the sign quietly sells the next few doors.</div>
+        <div class="sc-apply"><b>Start:</b> Place a yard sign at each install with permission, then re-canvass the block. Cost: signs only.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Vehicle wrap or magnets<span class="ch-tag paid">Offline</span></div>
+        <div class="sc-principle">Your car becomes a moving ad across every neighborhood you work.</div>
+        <div class="sc-apply"><b>Start:</b> Add a simple magnet or wrap with your number and a QR code. Cost: one-time.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Sponsorships and local events<span class="ch-tag under">Underused</span></div>
+        <div class="sc-principle">Little league teams, school programs, church bulletins, and town fairs put your name in front of homeowner families.</div>
+        <div class="sc-apply"><b>Start:</b> Sponsor a local team or buy a community-paper or bulletin spot in your towns. Cost: varies, often modest.</div>
+      </div>
+    </div>
+
+    <div class="sub-label reveal">Partnerships and referral</div>
+    <div class="strat-grid reveal">
+      <div class="strat-card">
+        <div class="sc-name">Realtor partnerships<span class="ch-tag under">Underused</span></div>
+        <div class="sc-principle">Agents have the exact homeowners at the exact moment they move.</div>
+        <div class="sc-apply"><b>Start:</b> Offer a co-branded welcome-home kit and a referral fee per install to your top local agents. Cost: referral fee per close.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Moving companies<span class="ch-tag under">Underused</span></div>
+        <div class="sc-principle">Movers touch every new household days before they pick services.</div>
+        <div class="sc-apply"><b>Start:</b> Leave kits in their trucks and set a per-signup rev-share. Cost: rev-share per signup.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Property managers and apartments<span class="ch-tag under">Underused</span></div>
+        <div class="sc-principle">Complexes and managers control hundreds of doors and a steady flow of renter move-ins.</div>
+        <div class="sc-apply"><b>Start:</b> Pitch a building-wide offer or a referral arrangement for the no-contract internet. Cost: referral or revenue share.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Title and escrow<span class="ch-tag under">Underused</span></div>
+        <div class="sc-principle">Closing packets reach buyers right at the decision moment.</div>
+        <div class="sc-apply"><b>Start:</b> Bundle your flyer into closing packets through a local title partner. Cost: low.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Cross-promo with local trades<span class="ch-tag under">Underused</span></div>
+        <div class="sc-principle">Locksmiths, handymen, electricians, and solar reps already share your customer.</div>
+        <div class="sc-apply"><b>Start:</b> Trade referrals with non-competing local pros. Cost: free or reciprocal.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Customer referral program<span class="ch-tag free">Free</span></div>
+        <div class="sc-principle">Your happiest customers are your cheapest sales force.</div>
+        <div class="sc-apply"><b>Start:</b> Offer a reward such as a gift card or bill credit, ask on every install, and text a referral link. Cost: reward per referral.</div>
+      </div>
+    </div>
+
+    <div class="sub-label reveal">Data and new mover</div>
+    <div class="strat-grid reveal">
+      <div class="strat-card">
+        <div class="sc-name">New-mover lists (USPS NCOA)<span class="ch-tag under">Underused</span></div>
+        <div class="sc-principle">Movers buy services in the first 30 days, and a mover list gets you there before competitors do.</div>
+        <div class="sc-apply"><b>Start:</b> Pull a weekly new-mover list for your ZIPs and fire a postcard plus an SMS. Cost: about $0.05-0.15 per record.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Building permit data<span class="ch-tag under">Underused</span></div>
+        <div class="sc-principle">Permits flag new construction and remodels before anyone has moved in.</div>
+        <div class="sc-apply"><b>Start:</b> Pull weekly permits for your towns and target those streets first. Cost: free to low, since permits are public records.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Welcome programs<span class="ch-tag under">Underused</span></div>
+        <div class="sc-principle">Welcome-wagon style services deliver your offer to verified new residents.</div>
+        <div class="sc-apply"><b>Start:</b> Partner with or buy into a local new-resident welcome program. Cost: per household.</div>
+      </div>
+    </div>
+
+    <div class="prohibit reveal" style="margin-top:36px">
+      <h3>⛔ Channel guardrails</h3>
+      <ul>
+        <li>Keep fiber ads generic on every public platform — no carrier brand, logo, or pricing; security runs under the Direct Protection Security brand</li>
+        <li>Bandit signs stapled in the public right-of-way are illegal in most California cities — use private-property and at-install signs only</li>
+        <li>On Craigslist and the marketplaces, rotate your copy and do not over-post the same ad, since duplicate spam gets flagged and ghosted</li>
+        <li>Any SMS or call outreach needs prior express consent and a clear STOP opt-out under the TCPA</li>
+        <li>Get a door-to-door solicitation permit for each city that requires one</li>
+        <li>Track every channel cost per lead in the tracker and cut what does not pay</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- UNDERUSED SPEND PLAN -->
+<section class="section" id="uuplan">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <div class="eyebrow">Underused-channel plan</div>
+      <h2>The underused ad-spend plan</h2>
+      <p>A budget built entirely from the low-competition channels. Set your monthly spend and it splits across the underused methods, then converts into projected leads and sales — method by method. Every number is an editable estimate; replace the close rate with your own once you have real data.</p>
+    </div>
+
+    <div class="calc-wrap reveal">
+      <div class="calc-row"><div class="cl">Monthly ad budget <span class="cv" id="uu-budget-v">$1,500</span></div><input type="range" id="uu-budget" min="500" max="5000" step="50" value="1500" aria-label="Monthly ad budget"></div>
+      <div class="calc-row"><div class="cl">Close performance <span class="cv" id="uu-mult-v">1.0x</span></div><input type="range" id="uu-mult" min="60" max="140" step="10" value="100" aria-label="Close performance multiplier"></div>
+      <div class="calc-row"><div class="cl">Revenue per sale <span class="cv" id="uu-rev-v">$200</span></div><input type="range" id="uu-rev" min="50" max="600" step="10" value="200" aria-label="Revenue per sale"></div>
+      <div class="calc-results">
+        <div class="calc-stat"><div class="cs-l">Leads / mo</div><div class="cs-v" id="uu-leads">0</div></div>
+        <div class="calc-stat hl"><div class="cs-l">Sales / mo</div><div class="cs-v" id="uu-sales">0</div></div>
+        <div class="calc-stat"><div class="cs-l">Blended cost / lead</div><div class="cs-v" id="uu-cpl">$0</div></div>
+        <div class="calc-stat"><div class="cs-l">Cost / sale</div><div class="cs-v" id="uu-cps">$0</div></div>
+        <div class="calc-stat hl"><div class="cs-l">Revenue / mo</div><div class="cs-v" id="uu-revenue">$0</div></div>
+        <div class="calc-stat hl"><div class="cs-l">ROAS</div><div class="cs-v" id="uu-roas">0x</div></div>
+      </div>
+    </div>
+
+    <div class="sub-label reveal">Spend to sales, channel by channel</div>
+    <div class="uu-list reveal" id="uu-rows"></div>
+    <p class="mini-note" style="font-style:normal">Allocation, cost per lead, and close rate per channel are industry-typical starting estimates. The close-performance slider scales every channel up or down for your skill and market. Plug in your real cost per lead and close rate as you gather data in the tracker.</p>
+
+    <div class="keyrule reveal">
+      <p><b>Why this plan works.</b> It avoids the crowded Facebook and Google auctions where cost per lead is highest, and spreads the same budget across ten channels almost no local competitor touches. Referral and new-mover dollars convert hardest; the cheap social and marketplace channels add volume. Start with this split, then move budget toward whatever earns the lowest cost per sale.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FIBER TOP 5 -->
+<section class="section" id="fibertop5">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <div class="eyebrow">Specialty plan</div>
+      <h2>Fiber's top 5 ROI methods, by budget</h2>
+      <p>The five channels that return the most fiber sales per dollar, because each one lets you aim at serviceable, in-market homes instead of paying for impressions on streets where fiber is not lit. Tap a budget to see how the same split converts to sales at that spend.</p>
+    </div>
+
+    <div class="keyrule reveal">
+      <p><b>The fiber rule.</b> You can only sell where fiber is built, so ROI comes from aiming spend at lit streets and warm, in-market people. Referral and partnership dollars convert hardest; Nextdoor, new-mover, and high-intent search add serviceable volume. Skip broad social and marketplaces here — cheap clicks that mostly land on homes you cannot sell.</p>
+    </div>
+
+    <div class="sub-label reveal">Sales at each budget — tap to drill in</div>
+    <div class="calc-results reveal" id="ft-tiers"></div>
+
+    <div class="sub-label reveal">Spend to sales at <span id="ft-sel-label">$1,000</span>/mo</div>
+    <div class="uu-list reveal" id="ft-rows"></div>
+    <div class="calc-results reveal" id="ft-summary" style="margin-top:14px"></div>
+    <p class="mini-note" style="font-style:normal">Modeled at about $200 commission per fiber sale, with industry-typical cost per lead and close rates per method. Referral and partnership volume scale with your customer base and partner count, so treat the larger budgets as what is possible if you can source the leads. Replace every assumption with your real numbers from the tracker.</p>
   </div>
 </section>
 
@@ -1432,6 +1855,116 @@ Hey [name] — Complete Home Today is hiring door-to-door sales reps (fiber inte
   </div>
 </section>
 
+<!-- AUTOMATION -->
+<section class="section" id="automation">
+  <div class="wrap">
+    <div class="s-head reveal">
+      <div class="eyebrow">Automation</div>
+      <h2>Automate your posting</h2>
+      <p>The system that keeps your channels active without posting by hand: Claude writes, a scheduler posts. Here is how the pieces fit and which channels can run hands-off.</p>
+    </div>
+
+    <div class="keyrule reveal">
+      <p><b>The rule that makes this work.</b> Claude generates and formats the content; an official-API scheduler publishes it on a timer. Tools that log in and type your posts for you violate platform terms and risk your brand accounts — so we never use them.</p>
+    </div>
+
+    <div class="sub-label reveal">The loop</div>
+    <div class="pillars reveal">
+      <div class="pillar"><div class="pi-n">01</div><h4>Generate</h4><p>Claude produces a batch of posts or article links in your voice, compliant, as a CSV ready to import.</p></div>
+      <div class="pillar"><div class="pi-n">02</div><h4>Schedule</h4><p>Import the CSV into a scheduler, set your daily slots, and it auto-publishes through official APIs.</p></div>
+      <div class="pillar"><div class="pi-n">03</div><h4>Refill</h4><p>When the queue runs low, ask Claude for the next batch and re-import. The cycle repeats.</p></div>
+    </div>
+
+    <div class="sub-label reveal">What automates, and what does not</div>
+    <div class="auto-grid reveal">
+      <div class="auto-card">
+        <div class="ac-top"><span class="ac-name">X (Twitter)</span><span class="auto-status full">Full auto</span></div>
+        <p>Sanctioned through the official API. Bulk-import your article CSV to a scheduler and it posts on a timer. <b>Fully hands-off.</b></p>
+      </div>
+      <div class="auto-card">
+        <div class="ac-top"><span class="ac-name">Threads</span><span class="auto-status full">Full auto</span></div>
+        <p>Automatable through Meta's official API via a scheduler like SocialBee, Publer, or Meta Business Suite. <b>Official API only, never log-in bots.</b></p>
+      </div>
+      <div class="auto-card">
+        <div class="ac-top"><span class="ac-name">Facebook Page</span><span class="auto-status full">Full auto</span></div>
+        <p>Schedule ad-style posts free in Meta Business Suite, or through any scheduler. <b>This is your automated Facebook presence.</b></p>
+      </div>
+      <div class="auto-card">
+        <div class="ac-top"><span class="ac-name">Facebook groups</span><span class="auto-status manual">Manual</span></div>
+        <p>Meta removed group posting from its API in 2024, so no scheduler can post to groups. <b>Post by hand, varied, a few a day.</b></p>
+      </div>
+      <div class="auto-card">
+        <div class="ac-top"><span class="ac-name">Free job boards</span><span class="auto-status partial">Supervised</span></div>
+        <p>Most have no posting API. Claude drafts the listing; Cowork and Chrome can fill the forms while you watch. <b>Supervised, not unattended.</b></p>
+      </div>
+    </div>
+
+    <div class="sub-label reveal">Schedulers to use</div>
+    <div class="strat-grid reveal">
+      <div class="strat-card">
+        <div class="sc-name">SocialBee <span class="sc-dom">Rotation</span></div>
+        <div class="sc-principle">Upload your library as a content category and it rotates the posts automatically instead of fixed dates. Built for evergreen content. Around $29/mo.</div>
+        <div class="sc-apply"><b>Best for:</b> a rotating article library that repeats.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Publer <span class="sc-dom">Cheap CSV</span></div>
+        <div class="sc-principle">Bulk-import up to 500 posts by CSV across X, Threads, and Facebook. Note: X needs the paid plan, about $12/mo.</div>
+        <div class="sc-apply"><b>Best for:</b> low-cost, date-based bulk scheduling.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">PostEverywhere <span class="sc-dom">All-in-one</span></div>
+        <div class="sc-principle">CSV upload to seven platforms including X, Threads, and Facebook with automatic column mapping. From about $19/mo.</div>
+        <div class="sc-apply"><b>Best for:</b> one tool that covers every channel.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">Meta Business Suite <span class="sc-dom">Free</span></div>
+        <div class="sc-principle">Schedule Facebook Page and Threads posts free, up to 25 per upload. Does not cover X.</div>
+        <div class="sc-apply"><b>Best for:</b> a free Facebook and Threads start.</div>
+      </div>
+      <div class="strat-card">
+        <div class="sc-name">X native scheduler <span class="sc-dom">Free, X only</span></div>
+        <div class="sc-principle">Schedule X posts free in the web composer, but there is no CSV import, so you paste each post manually.</div>
+        <div class="sc-apply"><b>Best for:</b> free X posting without bulk upload.</div>
+      </div>
+    </div>
+    <p class="mini-note" style="font-style:normal">All of these publish through official APIs. Tell Claude which you pick and it reformats your CSV to that tool's exact import template.</p>
+
+    <div class="sub-label reveal">The posting pipeline</div>
+    <div class="plat reveal">
+      <div class="plat-head"><span class="plat-name">The X article pipeline</span><span class="plat-tag">Fully automated</span></div>
+      <ol class="plat-steps">
+        <li>Ask Claude for a batch of verified fiber and alarm article links with written hooks, delivered as a CSV.</li>
+        <li>Tell Claude which scheduler you chose; it reformats the CSV to that tool's exact import template.</li>
+        <li>Import the CSV into the scheduler and connect your X account through the official login.</li>
+        <li>Set five daily time slots spread across the day, with a 10-30 minute random offset so it never posts at the same second.</li>
+        <li>Turn on auto-publish, then refill the queue weekly or monthly with a fresh batch from Claude.</li>
+      </ol>
+      <div class="plat-note"><b>Note:</b> Keep replies and DMs human; only the posting is automated.</div>
+    </div>
+    <div class="plat reveal">
+      <div class="plat-head"><span class="plat-name">Groups and job boards</span><span class="plat-tag">Supervised</span></div>
+      <ol class="plat-steps">
+        <li>Claude writes a rotating set of group-ready ad variations and your job posts.</li>
+        <li>For Facebook groups: post a different variation by hand in a few groups a day, only where the rules allow, or use a scheduler's notify-me reminder.</li>
+        <li>For job boards: open Claude Desktop, Cowork, and Chrome, and have Claude fill each posting from your saved text while you approve every submission.</li>
+        <li>Log applicants and post performance in the Tracker, and repost when listings expire.</li>
+      </ol>
+      <div class="plat-note"><b>Note:</b> Never blast identical copy; vary it and keep volume sane to avoid spam flags.</div>
+    </div>
+
+    <div class="prohibit reveal" style="margin-top:36px">
+      <h3>⛔ Automation guardrails</h3>
+      <ul>
+        <li>Use only official-API schedulers; tools that log in and type for you violate platform terms and risk suspension</li>
+        <li>Facebook groups cannot be automated through any tool — post manually with varied copy and reasonable volume</li>
+        <li>Vary the copy per channel and randomize timing; identical posts on a fixed second look like a bot</li>
+        <li>Keep products generic in public posts, and never imply guaranteed income in recruiting content</li>
+        <li>Replies, comments, and DMs stay human — automation is for publishing, not conversation</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <!-- PRINCIPLES & CANON -->
 <section class="section" id="principles">
   <div class="wrap">
@@ -2062,6 +2595,111 @@ Hey [name] — Complete Home Today is hiring door-to-door sales reps (fiber inte
   } else {
     document.querySelectorAll(".reveal").forEach(function(el){ el.classList.add("in"); });
   }
+})();
+</script>
+<script>
+(function(){
+  var ch=[
+    {n:"Craigslist services",   w:0.08, cpl:12, cl:0.08},
+    {n:"Nextdoor sponsored",    w:0.14, cpl:12, cl:0.12},
+    {n:"Microsoft (Bing) Ads",  w:0.16, cpl:22, cl:0.16},
+    {n:"Pinterest ads",         w:0.08, cpl:16, cl:0.09},
+    {n:"TikTok Spark ads",      w:0.10, cpl:14, cl:0.08},
+    {n:"Snapchat ads",          w:0.06, cpl:15, cl:0.07},
+    {n:"EDDM direct mail",      w:0.14, cpl:30, cl:0.12},
+    {n:"New-mover mail + SMS",  w:0.12, cpl:24, cl:0.18},
+    {n:"Local sponsorships",    w:0.06, cpl:40, cl:0.10},
+    {n:"Referral rewards",      w:0.06, cpl:20, cl:0.30}
+  ];
+  function gid(id){return document.getElementById(id);}
+  function money(n){return "$"+Math.round(n).toLocaleString("en-US");}
+  function r1(n){return Math.round(n*10)/10;}
+  function calc(){
+    var b=gid("uu-budget"); if(!b) return;
+    var budget=+b.value, mult=(+gid("uu-mult").value)/100, rev=+gid("uu-rev").value;
+    gid("uu-budget-v").textContent=money(budget);
+    gid("uu-mult-v").textContent=mult.toFixed(1)+"x";
+    gid("uu-rev-v").textContent=money(rev);
+    var maxSpend=0; ch.forEach(function(c){ var sp=c.w*budget; if(sp>maxSpend) maxSpend=sp; });
+    var tLeads=0,tSales=0,html="";
+    ch.forEach(function(c){
+      var spend=budget*c.w, leads=c.cpl>0?spend/c.cpl:0, close=Math.min(0.95,c.cl*mult), sales=leads*close;
+      tLeads+=leads; tSales+=sales;
+      var pct=maxSpend>0?(spend/maxSpend*100):0;
+      var cps=sales>0?money(spend/sales):"—";
+      html+='<div class="uu-row"><div class="uu-rtop"><span class="uu-name">'+c.n+'</span><span class="uu-spend">'+money(spend)+'/mo</span></div>'
+        +'<div class="uu-track"><div class="uu-fill" style="width:'+pct.toFixed(1)+'%"></div></div>'
+        +'<div class="uu-metrics">~'+money(c.cpl)+' per lead · '+Math.round(close*100)+'% close · ~'+r1(leads)+' leads → <b>~'+r1(sales)+' sales</b> · '+cps+' per sale</div></div>';
+    });
+    var blendCpl=tLeads>0?money(budget/tLeads):"—";
+    var blendCps=tSales>0?money(budget/tSales):"—";
+    html+='<div class="uu-row tot"><div class="uu-rtop"><span class="uu-name">All underused channels</span><span class="uu-spend">'+money(budget)+'/mo</span></div>'
+      +'<div class="uu-metrics">'+blendCpl+' blended per lead · ~'+Math.round(tLeads)+' leads → <b>~'+Math.round(tSales)+' sales / mo</b> · '+blendCps+' per sale</div></div>';
+    gid("uu-rows").innerHTML=html;
+    var revenue=tSales*rev, roas=budget>0?revenue/budget:0;
+    gid("uu-leads").textContent=Math.round(tLeads);
+    gid("uu-sales").textContent=Math.round(tSales);
+    gid("uu-cpl").textContent=blendCpl;
+    gid("uu-cps").textContent=blendCps;
+    gid("uu-revenue").textContent=money(revenue);
+    gid("uu-roas").textContent=roas.toFixed(1)+"x";
+  }
+  ["uu-budget","uu-mult","uu-rev"].forEach(function(id){ var e=document.getElementById(id); if(e) e.addEventListener("input",calc); });
+  if(document.getElementById("uu-budget")) calc();
+})();
+</script>
+<script>
+(function(){
+  var rev=200, tiers=[500,1000,2500,5000], sel=1;
+  var m=[
+    {n:"Referral program",         w:0.22, cpl:15, cl:0.35},
+    {n:"Realtor / mover partners", w:0.22, cpl:20, cl:0.30},
+    {n:"Nextdoor",                 w:0.20, cpl:12, cl:0.14},
+    {n:"New-mover mail + SMS",     w:0.18, cpl:24, cl:0.18},
+    {n:"High-intent search",       w:0.18, cpl:28, cl:0.16}
+  ];
+  function gid(id){return document.getElementById(id);}
+  function money(n){return "$"+Math.round(n).toLocaleString("en-US");}
+  function r1(n){return Math.round(n*10)/10;}
+  function totalsFor(budget){
+    var L=0,S=0; m.forEach(function(c){ var sp=budget*c.w, leads=c.cpl>0?sp/c.cpl:0, sales=leads*Math.min(0.95,c.cl); L+=leads; S+=sales; });
+    return {leads:L,sales:S};
+  }
+  function renderTiers(){
+    gid("ft-tiers").innerHTML=tiers.map(function(b,i){
+      var t=totalsFor(b);
+      return '<div class="calc-stat ft-tier'+(i===sel?' hl':'')+'" data-i="'+i+'"><div class="cs-l">'+money(b)+'/mo</div><div class="cs-v">~'+Math.round(t.sales)+' sales</div></div>';
+    }).join('');
+    Array.prototype.forEach.call(document.querySelectorAll('#ft-tiers .ft-tier'),function(e){
+      e.addEventListener('click',function(){ sel=+e.getAttribute('data-i'); renderTiers(); renderDetail(); });
+    });
+  }
+  function renderDetail(){
+    var budget=tiers[sel];
+    gid("ft-sel-label").textContent=money(budget);
+    var maxSpend=0; m.forEach(function(c){ var sp=c.w*budget; if(sp>maxSpend) maxSpend=sp; });
+    var tLeads=0,tSales=0,html="";
+    m.forEach(function(c){
+      var spend=budget*c.w, leads=c.cpl>0?spend/c.cpl:0, close=Math.min(0.95,c.cl), sales=leads*close;
+      tLeads+=leads; tSales+=sales;
+      var pct=maxSpend>0?(spend/maxSpend*100):0, cps=sales>0?money(spend/sales):"—";
+      html+='<div class="uu-row"><div class="uu-rtop"><span class="uu-name">'+c.n+'</span><span class="uu-spend">'+money(spend)+'/mo</span></div>'
+        +'<div class="uu-track"><div class="uu-fill" style="width:'+pct.toFixed(1)+'%"></div></div>'
+        +'<div class="uu-metrics">~'+money(c.cpl)+' per lead · '+Math.round(close*100)+'% close · ~'+r1(leads)+' leads → <b>~'+r1(sales)+' sales</b> · '+cps+' per sale</div></div>';
+    });
+    var bCps=tSales>0?money(budget/tSales):"—";
+    html+='<div class="uu-row tot"><div class="uu-rtop"><span class="uu-name">All five methods</span><span class="uu-spend">'+money(budget)+'/mo</span></div>'
+      +'<div class="uu-metrics">~'+Math.round(tLeads)+' leads → <b>~'+Math.round(tSales)+' sales / mo</b> · '+bCps+' per sale</div></div>';
+    gid("ft-rows").innerHTML=html;
+    var revenue=tSales*rev, roas=budget>0?revenue/budget:0;
+    gid("ft-summary").innerHTML=
+      '<div class="calc-stat"><div class="cs-l">Leads / mo</div><div class="cs-v">'+Math.round(tLeads)+'</div></div>'
+     +'<div class="calc-stat hl"><div class="cs-l">Sales / mo</div><div class="cs-v">'+Math.round(tSales)+'</div></div>'
+     +'<div class="calc-stat"><div class="cs-l">Cost / sale</div><div class="cs-v">'+bCps+'</div></div>'
+     +'<div class="calc-stat hl"><div class="cs-l">Revenue / mo</div><div class="cs-v">'+money(revenue)+'</div></div>'
+     +'<div class="calc-stat hl"><div class="cs-l">ROAS</div><div class="cs-v">'+roas.toFixed(1)+'x</div></div>';
+  }
+  if(gid("ft-tiers")){ renderTiers(); renderDetail(); }
 })();
 </script>
 </body>
